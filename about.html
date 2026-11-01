@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us | One World One Stop</title>
+<meta name="description" content="One World One Stop brings content, language, creative design and print production together, from the first word to the finished product.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Public+Sans:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=block">
+<link rel="stylesheet" href="assets/styles.css">
+<style>
+  html { scroll-behavior: smooth; scroll-padding-top: 96px; overflow-x: clip; }
+  body { margin: 0; overflow-x: clip; overscroll-behavior-y: none; }
+  img { max-width: 100%; }
+  ::-webkit-scrollbar { display: none; }
+  html { scrollbar-width: none; }
+  .material-symbols-outlined { font-family: 'Material Symbols Outlined'; font-weight: normal; font-style: normal; line-height: 1; letter-spacing: normal; text-transform: none; white-space: nowrap; direction: ltr; -webkit-font-smoothing: antialiased; }
+  main > div > :first-child { margin-top: 0 !important; }
+  #mobile-menu { transition: opacity .2s ease, transform .2s ease; }
+  #mobile-menu[data-open="false"] { opacity: 0; transform: translateY(-8px); pointer-events: none; }
+  #mobile-menu[data-open="true"] { opacity: 1; transform: none; }
+  a:focus-visible, button:focus-visible { outline: 2px solid #094cb2; outline-offset: 2px; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition: none !important; animation: none !important; } }
+</style>
+</head>
+<body class="bg-surface font-body text-on-surface min-h-screen flex flex-col antialiased selection:bg-secondary-container selection:text-on-secondary-container">
+<header id="site-header" class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/95 backdrop-blur-md shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
+  <div class="h-16 sm:h-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 flex items-center justify-between gap-4 lg:gap-8">
+    <a class="flex items-center gap-3 group min-w-0" href="index.html" aria-label="O'Sullivan Communications – home">
+      <img src="assets/osc-logo.png" alt="OSC One World One Stop – O'Sullivan Communications" width="286" height="98" class="h-10 sm:h-12 w-auto shrink-0">
+    </a>
+    <nav class="hidden lg:flex items-center gap-8 xl:gap-10" aria-label="Main"><a class="text-sm text-on-surface-variant hover:text-on-surface transition-colors" href="index.html">Home</a><a class="text-sm text-on-surface-variant hover:text-on-surface transition-colors" href="services.html">Services</a><a class="text-sm text-on-surface-variant hover:text-on-surface transition-colors" href="industries.html">Industries</a><a class="text-sm text-on-surface-variant hover:text-on-surface transition-colors" href="our-work.html">Our Work</a><a aria-current="page" class="text-sm text-primary font-semibold transition-colors" href="about.html">About Us</a></nav>
+    <div class="flex items-center gap-3 sm:gap-4 shrink-0">
+      <a class="hidden sm:inline-flex items-center justify-center px-5 lg:px-6 py-2.5 rounded bg-primary text-on-primary text-sm font-medium hover:bg-primary-container transition-colors shadow-[0_1px_8px_rgba(0,0,0,0.04)]" href="contact.html">Discuss a Project</a>
+      <div class="hidden sm:flex w-8 h-8 rounded-full bg-primary items-center justify-center" aria-hidden="true"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div>
+      <button id="menu-toggle" type="button" class="lg:hidden inline-flex items-center justify-center w-10 h-10 rounded-lg text-on-surface hover:bg-surface-container transition-colors" aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu">
+        <span class="material-symbols-outlined text-2xl" id="menu-icon">menu</span>
+      </button>
+    </div>
+  </div>
+  <div id="mobile-menu" data-open="false" class="lg:hidden absolute left-0 right-0 top-full bg-surface-container-lowest shadow-lg max-h-[calc(100vh-4rem)] overflow-y-auto" aria-hidden="true">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex flex-col gap-1" aria-label="Mobile">
+      <a class="flex items-center justify-between px-4 py-3 rounded-lg text-base text-on-surface hover:bg-surface-container-low transition-colors" href="index.html">Home</a><a class="flex items-center justify-between px-4 py-3 rounded-lg text-base text-on-surface hover:bg-surface-container-low transition-colors" href="services.html">Services</a><a class="flex items-center justify-between px-4 py-3 rounded-lg text-base text-on-surface hover:bg-surface-container-low transition-colors" href="industries.html">Industries</a><a class="flex items-center justify-between px-4 py-3 rounded-lg text-base text-on-surface hover:bg-surface-container-low transition-colors" href="our-work.html">Our Work</a><a aria-current="page" class="flex items-center justify-between px-4 py-3 rounded-lg text-base bg-surface-container text-primary font-semibold transition-colors" href="about.html">About Us</a><a class="flex items-center justify-between px-4 py-3 rounded-lg text-base text-on-surface hover:bg-surface-container-low transition-colors" href="contact.html">Contact Us</a>
+      <a class="mt-3 inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded bg-primary text-on-primary text-sm font-semibold hover:bg-primary-container transition-colors" href="contact.html">Discuss a Project<span class="material-symbols-outlined text-lg">arrow_forward</span></a>
+    </nav>
+  </div>
+</header>
+<main class="w-full pt-16 sm:pt-20 bg-surface flex-1"><div class="flex flex-col w-full">
+
+<!-- SECTION 1: HERO -->
+<section class="relative w-full bg-surface-container-low overflow-hidden">
+<!-- Subtle architectural backdrop glow -->
+<div class="absolute -top-32 -right-32 w-96 h-96 rounded-full bg-secondary-container/40 blur-3xl pointer-events-none"></div>
+<div class="absolute bottom-0 left-12 w-80 h-80 rounded-full bg-primary-fixed/30 blur-2xl pointer-events-none"></div>
+<div class="max-w-7xl mx-auto px-6 lg:px-12 pt-16 pb-20 lg:pt-24 lg:pb-32 relative z-10">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+<!-- Text Column -->
+<div class="lg:col-span-7 flex flex-col gap-6">
+<div class="inline-flex items-center gap-3">
+<span class="h-px w-8 bg-primary"></span>
+<span class="text-xs font-semibold tracking-widest uppercase text-primary font-headline">Editorial &amp; Production Collective</span>
+</div>
+<h1 class="text-4xl sm:text-5xl lg:text-6xl font-headline font-bold text-on-surface leading-[1.08] tracking-tight">
+            Good work happens when every part works together.
+          </h1>
+<p class="text-lg lg:text-xl text-on-surface-variant font-normal leading-relaxed max-w-2xl">
+            We bring content, creativity, language, and production together to help brands communicate with confidence.
+          </p>
+<div class="flex flex-wrap items-center gap-4 pt-4">
+<a class="inline-flex items-center justify-center px-7 py-3 rounded-lg bg-primary text-on-primary font-medium text-sm shadow-md hover:bg-primary-container transition-all hover:shadow-lg" href="contact.html">
+              Discuss a Project
+              <span class="material-symbols-outlined ml-2 text-base">arrow_forward</span>
+</a>
+<div class="flex items-center gap-2 pl-4 text-xs font-medium text-on-surface-variant tracking-wide">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+              Synchronized Multilingual Delivery
+            </div>
+</div>
+</div>
+<!-- Visual Column: Editorial Craft & Layout Collage -->
+<div class="lg:col-span-5 relative w-full max-w-md mx-auto lg:max-w-none">
+<div class="relative w-full aspect-[4/5] rounded-xl overflow-hidden shadow-2xl bg-surface-container-lowest">
+<img class="w-full h-full object-cover transition-transform duration-700 hover:scale-105" data-alt="Editorial design studio setting with tactile physical book dummies, Swiss typography layout proofs, Pantone color swatches, fine art paper samples, and high-precision typographic typesetting grids. Soft natural morning window light, high-end studio aesthetic, subtle deep navy and rich purple undertones matching a refined creative agency atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCv0TJ1X3b882U4eWajXHMKpzHvGVZY7zvIn3yOJL3m9IUUKBe_APeDH4062UQfm1pfKAqgL3WI1v8xX870lrd_J2XWQkktRQgSt0ewS36PqRSAle_47ocsaWsC3tp86rlliOUXmF1Vqm14gSgirsEbD_yKzfKUgyGGof5mqbSoi5tfptA5o8gQJLL7g7vd6g8r5T1fveQxIYW0lYBh5SkdWwgp1s5XC4pNf6yqex58HoCbl7hd6uaF8g">
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/60 via-transparent to-transparent"></div>
+<!-- Float Tag -->
+<div class="absolute bottom-6 left-6 right-6 p-4 rounded-lg bg-surface-container-lowest/90 backdrop-blur-md shadow-lg flex items-center justify-between">
+<div>
+<p class="text-xs uppercase font-semibold tracking-wider text-primary">Single Point of Craft</p>
+<p class="text-sm font-headline font-medium text-on-surface">Precision Typography to Print</p>
+</div>
+<div class="w-9 h-9 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined text-lg">auto_awesome</span>
+</div>
+</div>
+</div>
+<!-- Secondary Overlapping Badge -->
+<div class="hidden sm:flex absolute -top-6 -left-6 bg-surface-container-lowest p-4 rounded-lg shadow-xl items-center gap-3 max-w-[220px]">
+<div class="p-2 rounded bg-tertiary-fixed text-on-tertiary-fixed">
+<span class="material-symbols-outlined text-xl">layers</span>
+</div>
+<div>
+<p class="text-xs font-semibold text-on-surface">Integrated Workflow</p>
+<p class="text-[11px] text-on-surface-variant leading-tight">No broken vendor handoffs</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 2: THE COMPANY INTRODUCTION -->
+<section class="w-full bg-surface py-20 lg:py-28 relative">
+<div class="max-w-7xl mx-auto px-6 lg:px-12">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+<!-- Left: Statement & Numbering -->
+<div class="lg:col-span-5 flex flex-col gap-4">
+<span class="text-xs font-semibold tracking-widest text-primary uppercase font-headline">01 / The Connection</span>
+<h2 class="text-3xl sm:text-4xl font-headline font-bold text-on-surface leading-tight">
+            More than a collection of services. One connected team.
+          </h2>
+<div class="w-16 h-1 bg-primary rounded-full mt-2"></div>
+</div>
+<!-- Right: Verbatim Body Copy in High-Contrast Card -->
+<div class="lg:col-span-7 flex flex-col gap-6">
+<div class="bg-surface-container-low p-5 sm:p-8 lg:p-10 rounded-xl shadow-sm space-y-6 text-on-surface-variant leading-relaxed text-base lg:text-lg">
+<p class="text-on-surface font-medium">
+              When your business serves different markets, every detail matters. The words need to be right. The design needs to feel true to your brand. Every version needs to be consistent. And the final product needs to be ready when you need it.
+            </p>
+<div class="pl-4 py-1 border-l-0 bg-secondary-container/30 rounded-lg p-4">
+<p class="text-on-surface text-base font-normal">
+                Managing all of this across different teams and vendors can quickly become complicated.
+              </p>
+</div>
+<p class="">
+              At One World One Stop, we help bring these moving parts together — making it easier to manage your projects, protect your brand, and take your content from the first idea to the finished product.
+            </p>
+</div>
+<!-- Micro Stats Strip -->
+<div class="grid grid-cols-3 gap-2 sm:gap-4 pt-4">
+<div class="bg-surface-container p-3 sm:p-4 rounded-lg text-center min-w-0">
+<span class="block text-lg sm:text-2xl font-bold font-headline text-primary break-words">100%</span>
+<span class="text-[10px] sm:text-xs text-on-surface-variant uppercase tracking-wider">Synchronized</span>
+</div>
+<div class="bg-surface-container p-3 sm:p-4 rounded-lg text-center min-w-0">
+<span class="block text-lg sm:text-2xl font-bold font-headline text-primary break-words">1</span>
+<span class="text-[10px] sm:text-xs text-on-surface-variant uppercase tracking-wider">Accountable Team</span>
+</div>
+<div class="bg-surface-container p-3 sm:p-4 rounded-lg text-center min-w-0">
+<span class="block text-lg sm:text-2xl font-bold font-headline text-primary break-words">End-to-End</span>
+<span class="text-[10px] sm:text-xs text-on-surface-variant uppercase tracking-wider">File Stewardship</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 3: THE CONNECTED APPROACH & WORKFLOW DIAGRAM -->
+<section class="w-full bg-surface-container py-20 lg:py-28 relative">
+<div class="max-w-7xl mx-auto px-6 lg:px-12">
+<!-- Section Header -->
+<div class="max-w-3xl mb-16 space-y-4">
+<span class="text-xs font-semibold tracking-widest text-primary uppercase font-headline">02 / Unified Architecture</span>
+<h2 class="text-3xl sm:text-4xl font-headline font-bold text-on-surface leading-tight">
+          Every part matters. How they work together matters more.
+        </h2>
+<p class="text-base lg:text-lg text-on-surface-variant leading-relaxed">
+          A successful project is about more than getting each task done. It is about making sure every part fits together.
+        </p>
+<p class="text-base text-on-surface-variant leading-relaxed">
+          Content, translation, design, and production all affect one another. When they work in sync, the process becomes clearer, the work stays consistent, and fewer details get lost along the way.
+        </p>
+<p class="text-base text-on-surface font-medium leading-relaxed">
+          Our approach brings these capabilities together, giving you a more connected way to manage the work your brand needs.
+        </p>
+</div>
+<!-- Clean Editorial Workflow Diagram: Fragmented Handoffs vs Unified Accountability -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
+<!-- The Old Way: Fragmented Handoffs -->
+<div class="bg-surface-container-highest/60 rounded-xl p-5 sm:p-8 flex flex-col justify-between shadow-sm relative overflow-hidden">
+<div class="space-y-4">
+<div class="flex items-center justify-between">
+<span class="text-xs font-bold uppercase tracking-widest text-error">Fragmented Model</span>
+<span class="material-symbols-outlined text-error">cancel</span>
+</div>
+<h3 class="text-xl font-headline font-semibold text-on-surface">Multiple Disconnected Vendors</h3>
+<p class="text-sm text-on-surface-variant">Disjointed handoffs where context evaporates, revisions duplicate, and ownership is lost.</p>
+<!-- Sequence Flow -->
+<div class="space-y-3 pt-4">
+<div class="p-3 bg-surface-container-lowest/80 rounded-lg flex items-center justify-between gap-3 text-xs text-on-surface-variant shadow-sm">
+<span class="font-medium">1. Content &amp; Copywriter</span>
+<span class="text-error font-medium text-right">Handoff Gap</span>
+</div>
+<div class="flex justify-center -my-1 text-outline">
+<span class="material-symbols-outlined text-base">arrow_downward</span>
+</div>
+<div class="p-3 bg-surface-container-lowest/80 rounded-lg flex items-center justify-between gap-3 text-xs text-on-surface-variant shadow-sm">
+<span class="font-medium">2. Isolated Translation Agency</span>
+<span class="text-error font-medium text-right">Missing Layout Context</span>
+</div>
+<div class="flex justify-center -my-1 text-outline">
+<span class="material-symbols-outlined text-base">arrow_downward</span>
+</div>
+<div class="p-3 bg-surface-container-lowest/80 rounded-lg flex items-center justify-between gap-3 text-xs text-on-surface-variant shadow-sm">
+<span class="font-medium">3. Independent Graphic Studio</span>
+<span class="text-error font-medium text-right">Text Overflow &amp; Delays</span>
+</div>
+<div class="flex justify-center -my-1 text-outline">
+<span class="material-symbols-outlined text-base">arrow_downward</span>
+</div>
+<div class="p-3 bg-surface-container-lowest/80 rounded-lg flex items-center justify-between gap-3 text-xs text-on-surface-variant shadow-sm">
+<span class="font-medium">4. Separate Print / Digital Supplier</span>
+<span class="text-error font-medium text-right">File Preflight Errors</span>
+</div>
+</div>
+</div>
+<div class="mt-6 pt-4 bg-surface-container-high/60 rounded-lg p-3 text-xs text-on-surface-variant flex items-center gap-2">
+<span class="material-symbols-outlined text-error text-base">warning</span>
+<span class="">Result: Client bears 100% of the coordination burden and version risk.</span>
+</div>
+</div>
+<!-- The One World One Stop Way: Unified Accountability -->
+<div class="bg-surface-container-lowest rounded-xl p-5 sm:p-8 flex flex-col justify-between shadow-xl relative overflow-hidden">
+<div class="absolute top-0 right-0 w-36 h-36 bg-primary-fixed/40 rounded-bl-full pointer-events-none"></div>
+<div class="space-y-4 relative z-10">
+<div class="flex items-center justify-between">
+<span class="text-xs font-bold uppercase tracking-widest text-primary">Unified Model</span>
+<span class="material-symbols-outlined text-primary">check_circle</span>
+</div>
+<h3 class="text-xl font-headline font-semibold text-on-surface">One World One Stop Framework</h3>
+<p class="text-sm text-on-surface-variant">Continuous cross-discipline collaboration inside a singular stewardship loop.</p>
+<!-- Circular Interactive Diagram -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-4">
+<div class="bg-surface-container-low p-4 rounded-lg flex flex-col gap-1 transition-all hover:bg-secondary-container/40">
+<div class="flex items-center gap-2 text-primary font-semibold text-xs tracking-wider uppercase">
+<span class="material-symbols-outlined text-base">edit_note</span> Content
+                </div>
+<p class="text-xs text-on-surface-variant">Original voice created with downstream formats and localization in mind.</p>
+</div>
+<div class="bg-surface-container-low p-4 rounded-lg flex flex-col gap-1 transition-all hover:bg-secondary-container/40">
+<div class="flex items-center gap-2 text-primary font-semibold text-xs tracking-wider uppercase">
+<span class="material-symbols-outlined text-base">translate</span> Language
+                </div>
+<p class="text-xs text-on-surface-variant">Context-aware translation mapped directly into graphic layouts in real time.</p>
+</div>
+<div class="bg-surface-container-low p-4 rounded-lg flex flex-col gap-1 transition-all hover:bg-secondary-container/40">
+<div class="flex items-center gap-2 text-primary font-semibold text-xs tracking-wider uppercase">
+<span class="material-symbols-outlined text-base">palette</span> Creative Design
+                </div>
+<p class="text-xs text-on-surface-variant">Visual coherence crafted to scale seamlessly across global aspect ratios.</p>
+</div>
+<div class="bg-surface-container-low p-4 rounded-lg flex flex-col gap-1 transition-all hover:bg-secondary-container/40">
+<div class="flex items-center gap-2 text-primary font-semibold text-xs tracking-wider uppercase">
+<span class="material-symbols-outlined text-base">precision_manufacturing</span> Production
+                </div>
+<p class="text-xs text-on-surface-variant">Flawless mechanical files pre-checked for print and screen deployment.</p>
+</div>
+</div>
+</div>
+<div class="mt-6 pt-4 bg-primary text-on-primary rounded-lg p-3 text-xs flex items-center gap-2 font-medium">
+<span class="material-symbols-outlined text-base">verified</span>
+<span class="">Result: One accountable partner. Seamless execution. Total peace of mind.</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 4: WHAT GUIDES OUR WORK (4 PILLARS) -->
+<section class="w-full bg-surface py-20 lg:py-28 relative">
+<div class="max-w-7xl mx-auto px-6 lg:px-12">
+<div class="flex flex-col gap-3 mb-16">
+<span class="text-xs font-semibold tracking-widest text-primary uppercase font-headline">03 / Guiding Principles</span>
+<h2 class="text-3xl sm:text-4xl font-headline font-bold text-on-surface leading-tight">
+          What Guides Our Work
+        </h2>
+<p class="text-on-surface-variant text-base max-w-xl">
+          Four foundational commitments embedded into every phase of client engagement and file production.
+        </p>
+</div>
+<!-- 4 Pillars Grid (Bento Style) -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Pillar 1 -->
+<div class="bg-surface-container-low hover:bg-surface-container-lowest transition-all duration-300 p-8 rounded-xl shadow-sm hover:shadow-md flex flex-col justify-between group">
+<div class="space-y-5">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-2xl">search_check</span>
+</div>
+<h3 class="text-lg font-headline font-bold text-on-surface">We care about the details</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">
+              The smallest details can make a big difference. We pay attention to the words, layouts, files, and final checks that help your materials meet the mark.
+            </p>
+</div>
+<div class="pt-6 mt-6 flex items-center gap-2 text-xs font-semibold text-primary">
+<span class="">Precision First</span>
+<span class="material-symbols-outlined text-sm">check</span>
+</div>
+</div>
+<!-- Pillar 2 -->
+<div class="bg-surface-container-low hover:bg-surface-container-lowest transition-all duration-300 p-8 rounded-xl shadow-sm hover:shadow-md flex flex-col justify-between group">
+<div class="space-y-5">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-2xl">visibility</span>
+</div>
+<h3 class="text-lg font-headline font-bold text-on-surface">We keep the bigger picture in mind</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">
+              Every project has a purpose, a deadline, and a brand behind it. We look beyond individual tasks to understand how each piece contributes to the final result.
+            </p>
+</div>
+<div class="pt-6 mt-6 flex items-center gap-2 text-xs font-semibold text-primary">
+<span class="">Strategic Clarity</span>
+<span class="material-symbols-outlined text-sm">check</span>
+</div>
+</div>
+<!-- Pillar 3 -->
+<div class="bg-surface-container-low hover:bg-surface-container-lowest transition-all duration-300 p-8 rounded-xl shadow-sm hover:shadow-md flex flex-col justify-between group">
+<div class="space-y-5">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-2xl">groups</span>
+</div>
+<h3 class="text-lg font-headline font-bold text-on-surface">We believe good work takes teamwork</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">
+              Strong results come from people and processes working well together. We value clear communication, thoughtful coordination, and shared responsibility throughout the project.
+            </p>
+</div>
+<div class="pt-6 mt-6 flex items-center gap-2 text-xs font-semibold text-primary">
+<span class="">Collaborative Rigor</span>
+<span class="material-symbols-outlined text-sm">check</span>
+</div>
+</div>
+<!-- Pillar 4 -->
+<div class="bg-surface-container-low hover:bg-surface-container-lowest transition-all duration-300 p-8 rounded-xl shadow-sm hover:shadow-md flex flex-col justify-between group">
+<div class="space-y-5">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-2xl">verified_user</span>
+</div>
+<h3 class="text-lg font-headline font-bold text-on-surface">We take your brand seriously</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">
+              Your content represents your business, wherever it appears and whatever language it speaks. We work to keep your message clear and your brand consistent across every version.
+            </p>
+</div>
+<div class="pt-6 mt-6 flex items-center gap-2 text-xs font-semibold text-primary">
+<span class="">Brand Integrity</span>
+<span class="material-symbols-outlined text-sm">check</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 5: EXPERIENCE -->
+<section class="w-full bg-surface-container-low py-20 lg:py-28 relative overflow-hidden">
+<div class="max-w-7xl mx-auto px-6 lg:px-12">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+<!-- Left: Image collage showing production depth -->
+<div class="lg:col-span-5 order-2 lg:order-1 relative">
+<div class="relative w-full aspect-[4/3] rounded-xl overflow-hidden shadow-xl bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Editorial prepress inspection workspace with magnifying loupe checking printing dots on luxury brand packaging and multinational publication proofs. Crisp color evaluation booth, tactile press proofs, clean contemporary aesthetic, deep purple and rich neutral tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJIU3lWD-ZI-OZdUnOH2npVW-r9kcAS69l7bpmzjf3iH9NJ66eBrpSZ43MYxuNoVHe9uNm0pXILUlTvyllXKDgpEVmK8phRR3i_WIsg0B2HI4z5hyN5tJCzvCeDcYqm4lkTW6jnvXLG2w18_NhJAGMmr1vUIp3tZj3ixcfXeNNmIippMO5z_eZBz7M8QWbpsORx-jpeXmNhud9M_6G_z7NjHxoFpIjbKgj2D4-8Mi-fqwTfOz91WxW8g">
+</div>
+<!-- Editorial note overlay card -->
+<div class="relative mt-4 sm:mt-0 sm:absolute sm:-bottom-6 sm:-right-6 bg-surface-container-lowest p-5 sm:p-6 rounded-xl shadow-lg sm:max-w-xs">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-2xl">verified</span>
+<div>
+<h4 class="text-sm font-headline font-bold text-on-surface">End-to-End Governance</h4>
+<p class="text-xs text-on-surface-variant mt-1 leading-snug">From early manuscript structure to certified mechanical sign-off.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Right: Verbatim Experience Copy -->
+<div class="lg:col-span-7 order-1 lg:order-2 flex flex-col gap-6">
+<span class="text-xs font-semibold tracking-widest text-primary uppercase font-headline">04 / Proven Capability</span>
+<h2 class="text-3xl sm:text-4xl font-headline font-bold text-on-surface leading-tight">
+            Experience you can build on.
+          </h2>
+<div class="space-y-4 text-on-surface-variant text-base lg:text-lg leading-relaxed">
+<p class="">
+              With established industry experience, we understand the care and coordination it takes to bring complex content projects to completion.
+            </p>
+<p class="">
+              From the first brief to the final files, our focus is on helping you move work forward with greater clarity and confidence.
+            </p>
+<p class="text-on-surface font-medium">
+              Whether you need support with a single project or an ongoing stream of materials, we aim to make the process easier to manage and the results easier to trust.
+            </p>
+</div>
+<!-- Capability highlights -->
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-4">
+<div class="p-3 bg-surface-container rounded-lg">
+<span class="block text-xs font-semibold text-primary uppercase">Single Project</span>
+<span class="text-xs text-on-surface-variant">Agile rapid sprint</span>
+</div>
+<div class="p-3 bg-surface-container rounded-lg">
+<span class="block text-xs font-semibold text-primary uppercase">Ongoing Retainer</span>
+<span class="text-xs text-on-surface-variant">Embedded extension</span>
+</div>
+<div class="p-3 bg-surface-container rounded-lg">
+<span class="block text-xs font-semibold text-primary uppercase">Omnichannel</span>
+<span class="text-xs text-on-surface-variant">Print + Screen + Pack</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 6: INDUSTRIES SUPPORTED -->
+<section class="w-full bg-surface py-20 lg:py-28 relative">
+<div class="max-w-7xl mx-auto px-6 lg:px-12">
+<div class="max-w-2xl mb-12 space-y-3">
+<span class="text-xs font-semibold tracking-widest text-primary uppercase font-headline">05 / Market Depth</span>
+<h2 class="text-3xl sm:text-4xl font-headline font-bold text-on-surface leading-tight">
+          Helping brands communicate across markets.
+        </h2>
+<p class="text-on-surface-variant text-base lg:text-lg leading-relaxed">
+          We support businesses that need their customer-facing materials to work across languages, formats, and markets.
+        </p>
+</div>
+<!-- Industry Cards Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Travel and Airlines -->
+<a class="group bg-surface-container-low hover:bg-surface-container-lowest p-6 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between gap-4 min-h-[14rem]" href="industries.html">
+<div class="space-y-3">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-xl">flight_takeoff</span>
+</div>
+<h3 class="text-lg font-headline font-bold text-on-surface group-hover:text-primary transition-colors">
+              Travel and Airlines
+            </h3>
+<p class="text-xs text-on-surface-variant leading-relaxed">
+              In-flight publishing, global booking collateral, safety cards, and multilingual passenger guides.
+            </p>
+</div>
+<div class="flex items-center text-xs font-semibold text-primary gap-1 pt-2">
+<span class="">Explore sector</span>
+<span class="material-symbols-outlined text-sm transition-transform group-hover:translate-x-1">arrow_forward</span>
+</div>
+</a>
+<!-- Cosmetics and Luxury -->
+<a class="group bg-surface-container-low hover:bg-surface-container-lowest p-6 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between gap-4 min-h-[14rem]" href="industries.html">
+<div class="space-y-3">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-xl">spa</span>
+</div>
+<h3 class="text-lg font-headline font-bold text-on-surface group-hover:text-primary transition-colors">
+              Cosmetics and Luxury
+            </h3>
+<p class="text-xs text-on-surface-variant leading-relaxed">
+              Prestige packaging typography, compliant ingredient translations, and campaign lookbooks.
+            </p>
+</div>
+<div class="flex items-center text-xs font-semibold text-primary gap-1 pt-2">
+<span class="">Explore sector</span>
+<span class="material-symbols-outlined text-sm transition-transform group-hover:translate-x-1">arrow_forward</span>
+</div>
+</a>
+<!-- Consumer Products -->
+<a class="group bg-surface-container-low hover:bg-surface-container-lowest p-6 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between gap-4 min-h-[14rem]" href="industries.html">
+<div class="space-y-3">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-xl">inventory_2</span>
+</div>
+<h3 class="text-lg font-headline font-bold text-on-surface group-hover:text-primary transition-colors">
+              Consumer Products
+            </h3>
+<p class="text-xs text-on-surface-variant leading-relaxed">
+              Retail point-of-sale displays, localized instruction manuals, and multi-territory packaging suites.
+            </p>
+</div>
+<div class="flex items-center text-xs font-semibold text-primary gap-1 pt-2">
+<span class="">Explore sector</span>
+<span class="material-symbols-outlined text-sm transition-transform group-hover:translate-x-1">arrow_forward</span>
+</div>
+</a>
+<!-- Insurance -->
+<a class="group bg-surface-container-low hover:bg-surface-container-lowest p-6 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between gap-4 min-h-[14rem]" href="industries.html">
+<div class="space-y-3">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-xl">health_and_safety</span>
+</div>
+<h3 class="text-lg font-headline font-bold text-on-surface group-hover:text-primary transition-colors">
+              Insurance
+            </h3>
+<p class="text-xs text-on-surface-variant leading-relaxed">
+              Regulatory disclosures, policyholder handbooks, benefits brochures, and high-stakes financial copy.
+            </p>
+</div>
+<div class="flex items-center text-xs font-semibold text-primary gap-1 pt-2">
+<span class="">Explore sector</span>
+<span class="material-symbols-outlined text-sm transition-transform group-hover:translate-x-1">arrow_forward</span>
+</div>
+</a>
+</div>
+</div>
+</section>
+<!-- SECTION 7: CLOSING MESSAGE / CTA -->
+<section class="w-full bg-surface-container-low py-20 lg:py-28 relative">
+<div class="max-w-7xl mx-auto px-6 lg:px-12">
+<div class="bg-surface-container-lowest rounded-2xl p-6 sm:p-12 lg:p-16 shadow-xl relative overflow-hidden">
+<!-- Decorative subtle background geometry -->
+<div class="absolute -bottom-24 -right-24 w-80 h-80 rounded-full bg-secondary-container/30 pointer-events-none"></div>
+<div class="absolute top-0 right-1/4 w-48 h-48 rounded-full bg-primary-fixed/20 pointer-events-none blur-xl"></div>
+<div class="max-w-3xl relative z-10 space-y-6">
+<span class="text-xs font-semibold tracking-widest text-primary uppercase font-headline">06 / Let's Connect</span>
+<h2 class="text-3xl sm:text-4xl lg:text-5xl font-headline font-bold text-on-surface leading-tight">
+            A more connected way to get things done.
+          </h2>
+<div class="space-y-4 text-base lg:text-lg text-on-surface-variant leading-relaxed">
+<p class="">
+              We know you have enough to manage without having to chase every handoff, track every version, or coordinate every supplier yourself.
+            </p>
+<p class="">
+              That is why we bring the right capabilities together around your project — helping connect the people, details, and steps needed to get the work done.
+            </p>
+<p class="text-on-surface font-semibold text-lg lg:text-xl">
+              You stay focused on your goals. We help keep the work moving.
+            </p>
+</div>
+<!-- Deep Navy / Primary CTA Button -->
+<div class="pt-6">
+<a class="inline-flex items-center justify-center px-8 py-4 rounded-lg bg-primary text-on-primary font-headline font-medium text-base shadow-lg hover:bg-primary-container transition-all hover:shadow-xl" href="contact.html">
+              Discuss a Project
+              <span class="material-symbols-outlined ml-3 text-lg">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div></main>
+<footer class="w-full bg-surface-container-low mt-auto">
+  <div class="max-w-7xl mx-auto px-6 lg:px-12 py-14 lg:py-20">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8">
+      <div class="sm:col-span-2 lg:col-span-4 flex flex-col gap-5">
+        <a class="flex items-center gap-3" href="index.html"><img src="assets/osc-logo.png" alt="OSC One World One Stop – O'Sullivan Communications" width="286" height="98" class="h-14 w-auto"></a>
+        <p class="text-sm leading-relaxed text-on-surface-variant max-w-sm">Bringing content, language, creative design, and production together — from the first word to the finished product.</p>
+      </div>
+      <div class="lg:col-span-3 flex flex-col gap-4">
+        <span class="text-xs font-semibold tracking-wider uppercase text-on-surface">Navigation</span>
+        <nav class="flex flex-col gap-2.5" aria-label="Footer"><a class="text-sm text-on-surface-variant hover:text-on-surface transition-colors" href="index.html">Home</a><a class="text-sm text-on-surface-variant hover:text-on-surface transition-colors" href="services.html">Services</a><a class="text-sm text-on-surface-variant hover:text-on-surface transition-colors" href="industries.html">Industries</a><a class="text-sm text-on-surface-variant hover:text-on-surface transition-colors" href="our-work.html">Our Work</a><a aria-current="page" class="text-sm text-primary font-medium transition-colors" href="about.html">About Us</a><a class="text-sm text-on-surface-variant hover:text-on-surface transition-colors" href="contact.html">Discuss a Project</a></nav>
+      </div>
+      <div class="lg:col-span-3 flex flex-col gap-4">
+        <span class="text-xs font-semibold tracking-wider uppercase text-on-surface">Contact &amp; Inquiries</span>
+        <div class="flex flex-col gap-3 text-sm text-on-surface-variant">
+          <a class="text-on-surface hover:text-primary transition-colors font-medium break-all" href="mailto:inquiries@oneworldonestop.com">inquiries@oneworldonestop.com</a>
+          <p class="leading-relaxed">General inquiries, international partnerships, and production consultations.</p>
+        </div>
+      </div>
+      <div class="lg:col-span-2 flex flex-col gap-4">
+        <span class="text-xs font-semibold tracking-wider uppercase text-on-surface">Legal &amp; Standards</span>
+        <div class="flex flex-col gap-2.5 text-sm">
+          <a class="text-on-surface-variant hover:text-on-surface transition-colors" href="#">Privacy Policy</a>
+          <a class="text-on-surface-variant hover:text-on-surface transition-colors" href="#">Terms of Use</a>
+          <a class="text-on-surface-variant hover:text-on-surface transition-colors" href="#">Cookie Settings</a>
+        </div>
+      </div>
+    </div>
+    <div class="mt-12 lg:mt-16 bg-surface-container-high/40 rounded-lg p-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-on-surface-variant text-center sm:text-left">
+      <p>© 2026 O'Sullivan Communications. All rights reserved.</p>
+      <p class="font-medium text-on-surface tracking-wide">Commercial clarity, editorial craft, and production precision.</p>
+    </div>
+  </div>
+</footer>
+<script>
+(function () {
+  var btn = document.getElementById('menu-toggle');
+  var menu = document.getElementById('mobile-menu');
+  var icon = document.getElementById('menu-icon');
+  if (!btn || !menu) return;
+  function setOpen(open) {
+    menu.setAttribute('data-open', open ? 'true' : 'false');
+    menu.setAttribute('aria-hidden', open ? 'false' : 'true');
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    btn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    icon.textContent = open ? 'close' : 'menu';
+  }
+  btn.addEventListener('click', function () { setOpen(menu.getAttribute('data-open') !== 'true'); });
+  menu.addEventListener('click', function (e) { if (e.target.closest('a')) setOpen(false); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setOpen(false); });
+  document.addEventListener('click', function (e) { if (!e.target.closest('#site-header')) setOpen(false); });
+  window.addEventListener('resize', function () { if (window.innerWidth >= 1024) setOpen(false); });
+})();
+</script>
+
+<script>
+(function () {
+  var icons = [[/airline|flight|travel|boarding|passenger/i,'flight_takeoff'],[/cosmetic|skincare|perfume|luxury|beauty/i,'spa'],
+               [/consumer|retail|fmcg|electronics|supermarket/i,'inventory_2'],[/insurance|financial|policy/i,'description'],
+               [/press|print|proof|lithograph/i,'print'],[/typograph|multilingual|copy/i,'translate']];
+  function iconFor(t){ for (var i=0;i<icons.length;i++) if (icons[i][0].test(t)) return icons[i][1]; return 'palette'; }
+  function label(t){ var s=(t||'').split(/[,.:]/)[0].trim(); return s.length>70 ? s.slice(0,67)+'…' : s; }
+  function placeholder(t){
+    var d=document.createElement('div');
+    d.setAttribute('role','img'); d.setAttribute('aria-label', label(t) || 'Image');
+    d.style.cssText='display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:20px;text-align:center;'+
+      'background:linear-gradient(135deg,#d9e2ff 0%,#efedee 55%,#f9e37a 140%);color:#094cb2;min-height:100%;';
+    d.innerHTML='<span class="material-symbols-outlined" style="font-size:40px;opacity:.85">'+iconFor(t)+'</span>'+
+      '<span style="font:500 12px/1.4 Inter,system-ui,sans-serif;color:#434653;max-width:28ch">'+label(t)+'</span>';
+    return d;
+  }
+  function swap(img){
+    if (img.dataset.fallback) return; img.dataset.fallback='1';
+    var d=placeholder(img.getAttribute('data-alt')||img.alt);
+    d.className=img.className; d.classList.remove('object-cover');
+    if (!/\bh-(\d|full|auto|\[)/.test(img.className) && !/aspect-/.test(img.className)) d.style.minHeight='14rem';
+    img.replaceWith(d);
+  }
+  document.querySelectorAll('img').forEach(function(img){
+    if (img.complete && img.naturalWidth===0) swap(img); else img.addEventListener('error', function(){ swap(img); });
+  });
+  document.querySelectorAll('[style*="background-image"]').forEach(function(el){
+    var m=el.style.backgroundImage.match(/url\(["']?(.*?)["']?\)/); if(!m) return;
+    var t=new Image(); t.onerror=function(){ var p=placeholder(el.getAttribute('data-alt')); el.style.backgroundImage='none'; el.appendChild(p); p.style.height='100%'; }; t.src=m[1];
+  });
+})();
+</script>
+</body>
+</html>

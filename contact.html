@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us | One World One Stop</title>
+<meta name="description" content="One World One Stop brings content, language, creative design and print production together, from the first word to the finished product.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Public+Sans:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=block">
+<link rel="stylesheet" href="assets/styles.css">
+<style>
+  html { scroll-behavior: smooth; scroll-padding-top: 96px; overflow-x: clip; }
+  body { margin: 0; overflow-x: clip; overscroll-behavior-y: none; }
+  img { max-width: 100%; }
+  ::-webkit-scrollbar { display: none; }
+  html { scrollbar-width: none; }
+  .material-symbols-outlined { font-family: 'Material Symbols Outlined'; font-weight: normal; font-style: normal; line-height: 1; letter-spacing: normal; text-transform: none; white-space: nowrap; direction: ltr; -webkit-font-smoothing: antialiased; }
+  main > div > :first-child { margin-top: 0 !important; }
+  #mobile-menu { transition: opacity .2s ease, transform .2s ease; }
+  #mobile-menu[data-open="false"] { opacity: 0; transform: translateY(-8px); pointer-events: none; }
+  #mobile-menu[data-open="true"] { opacity: 1; transform: none; }
+  a:focus-visible, button:focus-visible { outline: 2px solid #094cb2; outline-offset: 2px; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition: none !important; animation: none !important; } }
+</style>
+</head>
+<body class="bg-surface font-body text-on-surface min-h-screen flex flex-col antialiased selection:bg-secondary-container selection:text-on-secondary-container">
+<header id="site-header" class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/95 backdrop-blur-md shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
+  <div class="h-16 sm:h-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 flex items-center justify-between gap-4 lg:gap-8">
+    <a class="flex items-center gap-3 group min-w-0" href="index.html" aria-label="O'Sullivan Communications – home">
+      <img src="assets/osc-logo.png" alt="OSC One World One Stop – O'Sullivan Communications" width="286" height="98" class="h-10 sm:h-12 w-auto shrink-0">
+    </a>
+    <nav class="hidden lg:flex items-center gap-8 xl:gap-10" aria-label="Main"><a class="text-sm text-on-surface-variant hover:text-on-surface transition-colors" href="index.html">Home</a><a class="text-sm text-on-surface-variant hover:text-on-surface transition-colors" href="services.html">Services</a><a class="text-sm text-on-surface-variant hover:text-on-surface transition-colors" href="industries.html">Industries</a><a class="text-sm text-on-surface-variant hover:text-on-surface transition-colors" href="our-work.html">Our Work</a><a class="text-sm text-on-surface-variant hover:text-on-surface transition-colors" href="about.html">About Us</a></nav>
+    <div class="flex items-center gap-3 sm:gap-4 shrink-0">
+      <a class="hidden sm:inline-flex items-center justify-center px-5 lg:px-6 py-2.5 rounded bg-primary text-on-primary text-sm font-medium hover:bg-primary-container transition-colors shadow-[0_1px_8px_rgba(0,0,0,0.04)]" href="contact.html">Discuss a Project</a>
+      <div class="hidden sm:flex w-8 h-8 rounded-full bg-primary items-center justify-center" aria-hidden="true"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div>
+      <button id="menu-toggle" type="button" class="lg:hidden inline-flex items-center justify-center w-10 h-10 rounded-lg text-on-surface hover:bg-surface-container transition-colors" aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu">
+        <span class="material-symbols-outlined text-2xl" id="menu-icon">menu</span>
+      </button>
+    </div>
+  </div>
+  <div id="mobile-menu" data-open="false" class="lg:hidden absolute left-0 right-0 top-full bg-surface-container-lowest shadow-lg max-h-[calc(100vh-4rem)] overflow-y-auto" aria-hidden="true">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex flex-col gap-1" aria-label="Mobile">
+      <a class="flex items-center justify-between px-4 py-3 rounded-lg text-base text-on-surface hover:bg-surface-container-low transition-colors" href="index.html">Home</a><a class="flex items-center justify-between px-4 py-3 rounded-lg text-base text-on-surface hover:bg-surface-container-low transition-colors" href="services.html">Services</a><a class="flex items-center justify-between px-4 py-3 rounded-lg text-base text-on-surface hover:bg-surface-container-low transition-colors" href="industries.html">Industries</a><a class="flex items-center justify-between px-4 py-3 rounded-lg text-base text-on-surface hover:bg-surface-container-low transition-colors" href="our-work.html">Our Work</a><a class="flex items-center justify-between px-4 py-3 rounded-lg text-base text-on-surface hover:bg-surface-container-low transition-colors" href="about.html">About Us</a><a aria-current="page" class="flex items-center justify-between px-4 py-3 rounded-lg text-base bg-surface-container text-primary font-semibold transition-colors" href="contact.html">Contact Us</a>
+      <a class="mt-3 inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded bg-primary text-on-primary text-sm font-semibold hover:bg-primary-container transition-colors" href="contact.html">Discuss a Project<span class="material-symbols-outlined text-lg">arrow_forward</span></a>
+    </nav>
+  </div>
+</header>
+<main class="w-full pt-16 sm:pt-20 bg-surface flex-1"><div class="flex flex-col w-full">
+
+<!-- Top Accent Ambient Gradients -->
+<div class="relative w-full overflow-hidden bg-surface">
+<div class="absolute -top-32 -left-20 w-96 h-96 rounded-full bg-secondary-container/40 blur-3xl pointer-events-none"></div>
+<div class="absolute top-1/4 -right-24 w-80 h-80 rounded-full bg-tertiary-fixed/30 blur-3xl pointer-events-none"></div>
+<!-- Section 1: Hero -->
+<section class="relative max-w-7xl mx-auto px-6 lg:px-12 pt-12 pb-16 lg:pt-16 lg:pb-24">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+<!-- Left Column -->
+<div class="lg:col-span-7 flex flex-col space-y-6">
+<div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-surface-container text-xs font-semibold tracking-wider uppercase text-primary w-fit shadow-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+            Direct Consultation Desk
+          </div>
+<h1 class="text-4xl sm:text-5xl lg:text-6xl font-headline font-bold tracking-tight text-on-surface leading-[1.12]">
+            Tell us what you're working on.
+          </h1>
+<div class="space-y-4 text-base sm:text-lg text-on-surface-variant font-normal leading-relaxed pt-2">
+<p class="">
+              Have a project in mind? We're here to help you move it forward.
+            </p>
+<p class="">
+              Whether you need support with content, translation, design, print production, or a combination of services, let's start with a conversation.
+            </p>
+<p class="">
+              Tell us a little about your goals, your requirements, and what you need to get done. We'll work with you to understand the project and explore how we can help.
+            </p>
+<p class="font-medium text-primary pt-2">
+              You don't need to have every detail figured out. That's what the first conversation is for.
+            </p>
+</div>
+<!-- Micro Highlights -->
+<div class="pt-4 grid grid-cols-3 gap-2 sm:gap-4">
+<div class="p-3 sm:p-4 rounded-xl bg-surface-container-low shadow-sm min-w-0">
+<span class="block text-lg sm:text-2xl font-bold font-headline text-on-surface">24h</span>
+<span class="text-xs text-on-surface-variant">Response Window</span>
+</div>
+<div class="p-3 sm:p-4 rounded-xl bg-surface-container-low shadow-sm min-w-0">
+<span class="block text-lg sm:text-2xl font-bold font-headline text-on-surface">1-Stop</span>
+<span class="text-xs text-on-surface-variant">End-to-End Delivery</span>
+</div>
+<div class="p-3 sm:p-4 rounded-xl bg-surface-container-low shadow-sm min-w-0">
+<span class="block text-lg sm:text-2xl font-bold font-headline text-on-surface">Global</span>
+<span class="text-xs text-on-surface-variant">Editorial &amp; Print</span>
+</div>
+</div>
+</div>
+<!-- Right Column: Quick Contact Card -->
+<div class="lg:col-span-5 flex flex-col">
+<div class="rounded-2xl bg-surface-container-lowest p-6 sm:p-8 lg:p-10 shadow-xl relative overflow-hidden">
+<div class="absolute top-0 right-0 w-32 h-32 bg-secondary-fixed/30 rounded-bl-full pointer-events-none"></div>
+<div class="flex items-center gap-3 mb-6">
+<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[22px]">contact_support</span>
+</div>
+<div>
+<span class="text-xs uppercase tracking-wider font-semibold text-secondary">Quick Contact</span>
+<h3 class="text-lg font-headline font-semibold text-on-surface">Consultation Overview</h3>
+</div>
+</div>
+<div class="space-y-6 text-sm">
+<div class="p-4 rounded-xl bg-surface-container-low">
+<span class="block text-xs uppercase tracking-wider font-semibold text-on-surface-variant mb-1">Direct Inquiries Email</span>
+<a class="text-base font-semibold text-primary hover:text-primary-container transition-colors break-all" href="mailto:inquiries@oneworldonestop.com">
+                  inquiries@oneworldonestop.com
+                </a>
+</div>
+<div class="p-4 rounded-xl bg-surface-container-low">
+<span class="block text-xs uppercase tracking-wider font-semibold text-on-surface-variant mb-1">Operational Hub</span>
+<span class="text-base font-medium text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-base">public</span>
+                  United States &amp; Global Coverage
+                </span>
+</div>
+<div class="p-4 rounded-xl bg-surface-container-low">
+<span class="block text-xs uppercase tracking-wider font-semibold text-on-surface-variant mb-1">Scope of Support</span>
+<p class="text-xs leading-relaxed text-on-surface-variant">
+                  Integrated editorial copy, translation across major locales, brand design, prepress mechanical packaging, and end-to-end commercial print fulfillment.
+                </p>
+</div>
+<div class="pt-2">
+<a class="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-lg bg-surface-container-highest text-on-surface font-semibold text-sm hover:bg-secondary-container transition-all" href="#inquiry-form">
+<span class="">Jump Directly to Form</span>
+<span class="material-symbols-outlined text-sm">arrow_downward</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Production Studio Visual Accent -->
+<div class="mt-6 rounded-2xl overflow-hidden shadow-md relative h-44">
+<div class="bg-cover bg-center w-full h-full" data-alt="A modern, high-end editorial and print production design studio bathed in warm daylight, showing precise swatch books, proof sheets, typography layouts, and sleek digital editing monitors with purple and neutral accents reflecting craft." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAr6ttGtTxbASPnaXnFTgwJdGpbUyCJD-cc52HG2ymeOqGwEKpemFRzTFnRZWBNSzQYyJTbxv6z8EAV3m7Gw1uqtPDAQmKptLHIIoOSW5FIZWnadCGgRfgpJMwJuz-puRUd8BrzcOZug7V7xp6MTp1Unh5umS15IVDMU1TGFelb7xiHDhrd5UeboS6KzZq_i4i313W0H8MIGmoXW1x1fAqnLrTrWzyY4vxkEM3jzwdSzqv4RLGooEKnSg')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-on-surface/80 via-transparent to-transparent flex items-end p-5">
+<p class="text-xs text-surface font-medium">Bespoke collaboration tailored to your production readiness.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Section 2: Project Inquiry Form (Interactive, High-Fidelity) -->
+<section class="w-full bg-surface-container-low py-16 lg:py-24" id="inquiry-form">
+<div class="max-w-4xl mx-auto px-6 lg:px-12">
+<!-- Section Header -->
+<div class="text-center max-w-2xl mx-auto mb-12">
+<span class="text-xs uppercase tracking-widest font-semibold text-primary">Inquiry Intake</span>
+<h2 class="text-3xl sm:text-4xl font-headline font-bold text-on-surface mt-2 tracking-tight">
+          Let's talk about your project.
+        </h2>
+<p class="text-base text-on-surface-variant mt-3 leading-relaxed">
+          Use the form below to tell us a little about what you need. The more you can share, the better we can understand how to help.
+        </p>
+</div>
+<!-- Notification prototype status toast (Hidden by default, triggered on submit) -->
+<div class="hidden mb-8 p-6 rounded-xl bg-surface-container-lowest shadow-xl transition-all duration-300" id="form-feedback-alert">
+<div class="flex items-start gap-3 sm:gap-4">
+<div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-on-primary text-[20px]">check_circle</span>
+</div>
+<div class="flex-1">
+<h4 class="text-base font-semibold text-on-surface">Inquiry Received</h4>
+<p class="text-sm text-on-surface-variant mt-1 leading-relaxed">
+              Thank you for reaching out. We have logged your project notes. Our lead producer will review your requirements and follow up within 24 business hours.
+            </p>
+</div>
+<button class="text-on-surface-variant hover:text-on-surface" onclick="document.getElementById('form-feedback-alert').classList.add('hidden')" type="button">
+<span class="material-symbols-outlined text-lg">close</span>
+</button>
+</div>
+</div>
+<!-- Main Form Container -->
+<form class="bg-surface-container-lowest rounded-2xl p-5 sm:p-8 lg:p-12 shadow-lg space-y-8" id="project-intake-form" onsubmit="handleFormSubmit(event)">
+<!-- Row 1: Contact Details -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+<!-- Full Name -->
+<div class="flex flex-col space-y-2">
+<label class="text-xs font-semibold uppercase tracking-wider text-on-surface-variant flex flex-wrap items-center justify-between gap-x-2 gap-y-1" for="full_name">
+              Full Name <span class="text-error font-normal text-xs">* Required</span>
+</label>
+<input class="w-full px-4 py-3 rounded-lg bg-surface-container text-on-surface text-sm focus:outline-none focus:ring-2 focus:ring-primary placeholder:text-outline transition-all" id="full_name" name="full_name" placeholder="e.g. Eleanor Vance" required="" type="text">
+</div>
+<!-- Work Email -->
+<div class="flex flex-col space-y-2">
+<label class="text-xs font-semibold uppercase tracking-wider text-on-surface-variant flex flex-wrap items-center justify-between gap-x-2 gap-y-1" for="work_email">
+              Work Email Address <span class="text-error font-normal text-xs">* Required</span>
+</label>
+<input class="w-full px-4 py-3 rounded-lg bg-surface-container text-on-surface text-sm focus:outline-none focus:ring-2 focus:ring-primary placeholder:text-outline transition-all" id="work_email" name="work_email" placeholder="e.g. eleanor@company.com" required="" type="email">
+</div>
+</div>
+<!-- Row 2: Company & Phone -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+<!-- Company Name -->
+<div class="flex flex-col space-y-2">
+<label class="text-xs font-semibold uppercase tracking-wider text-on-surface-variant flex flex-wrap items-center justify-between gap-x-2 gap-y-1" for="company_name">
+              Company Name <span class="text-error font-normal text-xs">* Required</span>
+</label>
+<input class="w-full px-4 py-3 rounded-lg bg-surface-container text-on-surface text-sm focus:outline-none focus:ring-2 focus:ring-primary placeholder:text-outline transition-all" id="company_name" name="company_name" placeholder="e.g. Global Media Corp" required="" type="text">
+</div>
+<!-- Phone Number -->
+<div class="flex flex-col space-y-2">
+<label class="text-xs font-semibold uppercase tracking-wider text-on-surface-variant flex flex-wrap items-center justify-between gap-x-2 gap-y-1" for="phone_number">
+              Phone Number <span class="text-outline text-xs lowercase font-normal">(optional)</span>
+</label>
+<input class="w-full px-4 py-3 rounded-lg bg-surface-container text-on-surface text-sm focus:outline-none focus:ring-2 focus:ring-primary placeholder:text-outline transition-all" id="phone_number" name="phone_number" placeholder="e.g. +1 (555) 019-2834" type="tel">
+</div>
+</div>
+<!-- Row 3: Multi-Select Chips (What do you need help with?) -->
+<div class="flex flex-col space-y-3 pt-2">
+<label class="text-xs font-semibold uppercase tracking-wider text-on-surface-variant flex flex-wrap items-center justify-between gap-x-2 gap-y-1">
+            What do you need help with? <span class="text-error font-normal text-xs">* Select all that apply</span>
+</label>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3" id="service-chips-group">
+<!-- Chip 1 -->
+<label class="service-chip relative flex items-center gap-3.5 p-3.5 rounded-xl bg-surface-container cursor-pointer transition-all hover:bg-surface-container-high">
+<input class="w-4 h-4 rounded text-primary focus:ring-primary accent-primary" name="services" type="checkbox" value="Content and copywriting">
+<span class="text-sm font-medium text-on-surface">Content and copywriting</span>
+</label>
+<!-- Chip 2 -->
+<label class="service-chip relative flex items-center gap-3.5 p-3.5 rounded-xl bg-surface-container cursor-pointer transition-all hover:bg-surface-container-high">
+<input class="w-4 h-4 rounded text-primary focus:ring-primary accent-primary" name="services" type="checkbox" value="Translation and localization">
+<span class="text-sm font-medium text-on-surface">Translation and localization</span>
+</label>
+<!-- Chip 3 -->
+<label class="service-chip relative flex items-center gap-3.5 p-3.5 rounded-xl bg-surface-container cursor-pointer transition-all hover:bg-surface-container-high">
+<input class="w-4 h-4 rounded text-primary focus:ring-primary accent-primary" name="services" type="checkbox" value="Creative and graphic design">
+<span class="text-sm font-medium text-on-surface">Creative and graphic design</span>
+</label>
+<!-- Chip 4 -->
+<label class="service-chip relative flex items-center gap-3.5 p-3.5 rounded-xl bg-surface-container cursor-pointer transition-all hover:bg-surface-container-high">
+<input class="w-4 h-4 rounded text-primary focus:ring-primary accent-primary" name="services" type="checkbox" value="Prepress and print production">
+<span class="text-sm font-medium text-on-surface">Prepress and print production</span>
+</label>
+<!-- Chip 5 -->
+<label class="service-chip relative flex items-center gap-3.5 p-3.5 rounded-xl bg-surface-container cursor-pointer transition-all hover:bg-surface-container-high">
+<input class="w-4 h-4 rounded text-primary focus:ring-primary accent-primary" name="services" type="checkbox" value="Digital content and content management">
+<span class="text-sm font-medium text-on-surface">Digital content and content management</span>
+</label>
+<!-- Chip 6 -->
+<label class="service-chip relative flex items-center gap-3.5 p-3.5 rounded-xl bg-surface-container cursor-pointer transition-all hover:bg-surface-container-high">
+<input class="w-4 h-4 rounded text-primary focus:ring-primary accent-primary" name="services" type="checkbox" value="Multiple services">
+<span class="text-sm font-medium text-on-surface">Multiple services</span>
+</label>
+<!-- Chip 7 -->
+<label class="service-chip relative flex items-center gap-3.5 p-3.5 rounded-xl bg-surface-container cursor-pointer transition-all hover:bg-surface-container-high sm:col-span-2">
+<input class="w-4 h-4 rounded text-primary focus:ring-primary accent-primary" name="services" type="checkbox" value="Not sure yet">
+<span class="text-sm font-medium text-on-surface">Not sure yet (let's brainstorm together)</span>
+</label>
+</div>
+</div>
+<!-- Row 4: Project Narrative -->
+<div class="flex flex-col space-y-2 pt-2">
+<label class="text-xs font-semibold uppercase tracking-wider text-on-surface-variant flex flex-wrap items-center justify-between gap-x-2 gap-y-1" for="project_details">
+            Tell us about your project <span class="text-error font-normal text-xs">* Required</span>
+</label>
+<textarea class="w-full p-4 rounded-lg bg-surface-container text-on-surface text-sm focus:outline-none focus:ring-2 focus:ring-primary placeholder:text-outline leading-relaxed transition-all resize-y" id="project_details" name="project_details" placeholder="What are you working on? What do you need? Are there any key requirements or deadlines we should know about?" required="" rows="5"></textarea>
+</div>
+<!-- Row 5: Timeline & Referral Selection -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-2">
+<!-- Timeline Dropdown -->
+<div class="flex flex-col space-y-2">
+<label class="text-xs font-semibold uppercase tracking-wider text-on-surface-variant flex flex-wrap items-center justify-between gap-x-2 gap-y-1" for="timeline">
+              Project Timeline <span class="text-outline text-xs lowercase font-normal">(optional)</span>
+</label>
+<div class="relative">
+<select class="w-full px-4 py-3 rounded-lg bg-surface-container text-on-surface text-sm focus:outline-none focus:ring-2 focus:ring-primary appearance-none pr-10 cursor-pointer" id="timeline" name="timeline">
+<option disabled="" selected="" value="">Select anticipated timeframe</option>
+<option value="As soon as possible">As soon as possible</option>
+<option value="Within the next month">Within the next month</option>
+<option value="Within the next 3 months">Within the next 3 months</option>
+<option value="Planning ahead">Planning ahead</option>
+<option value="Not decided yet">Not decided yet</option>
+</select>
+<span class="material-symbols-outlined pointer-events-none absolute right-3 top-3.5 text-on-surface-variant text-[20px]">
+                keyboard_arrow_down
+              </span>
+</div>
+</div>
+<!-- Referral Dropdown -->
+<div class="flex flex-col space-y-2">
+<label class="text-xs font-semibold uppercase tracking-wider text-on-surface-variant flex flex-wrap items-center justify-between gap-x-2 gap-y-1" for="referral">
+              How did you hear about us? <span class="text-outline text-xs lowercase font-normal">(optional)</span>
+</label>
+<div class="relative">
+<select class="w-full px-4 py-3 rounded-lg bg-surface-container text-on-surface text-sm focus:outline-none focus:ring-2 focus:ring-primary appearance-none pr-10 cursor-pointer" id="referral" name="referral">
+<option disabled="" selected="" value="">Select referral source</option>
+<option value="Referral">Referral</option>
+<option value="Industry Search">Industry Search</option>
+<option value="Partner">Partner</option>
+<option value="Event">Event</option>
+<option value="Other">Other</option>
+</select>
+<span class="material-symbols-outlined pointer-events-none absolute right-3 top-3.5 text-on-surface-variant text-[20px]">
+                keyboard_arrow_down
+              </span>
+</div>
+</div>
+</div>
+<!-- Row 6: Consent & Privacy Notice -->
+<div class="pt-4">
+<label class="flex items-start gap-3 cursor-pointer group">
+<input class="w-4 h-4 mt-0.5 rounded text-primary focus:ring-primary accent-primary shrink-0" name="privacy_consent" required="" type="checkbox">
+<span class="text-xs text-on-surface-variant leading-relaxed select-none">
+              I agree to the storage and processing of my project details in accordance with the One World One Stop Privacy Policy. We do not sell or distribute personal client data.
+            </span>
+</label>
+</div>
+<!-- Row 7: Action & Supporting Note -->
+<div class="pt-4 flex flex-col sm:flex-row items-center justify-between gap-6">
+<button class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-lg bg-primary text-on-primary font-semibold text-sm hover:bg-primary-container shadow-md transition-all active:scale-[0.98]" id="submit-btn" type="submit">
+<span class="">Send Project Inquiry</span>
+<span class="material-symbols-outlined text-[18px]">send</span>
+</button>
+<p class="text-xs text-on-surface-variant text-center sm:text-right max-w-xs leading-relaxed">
+            We'll review your inquiry and get back to you about the next steps.
+          </p>
+</div>
+</form>
+</div>
+</section>
+<!-- Section 3: Direct Contact -->
+<section class="w-full max-w-7xl mx-auto px-6 lg:px-12 py-16 lg:py-24">
+<div class="p-6 sm:p-12 lg:p-16 rounded-3xl bg-surface-container relative overflow-hidden shadow-sm">
+<div class="absolute -right-16 -bottom-16 w-64 h-64 rounded-full bg-secondary-fixed/40 blur-2xl pointer-events-none"></div>
+<div class="max-w-2xl mb-10">
+<span class="text-xs uppercase tracking-widest font-semibold text-primary">Immediate Touchpoints</span>
+<h2 class="text-3xl font-headline font-bold text-on-surface mt-2 tracking-tight">
+          Prefer to speak with us directly?
+        </h2>
+<p class="text-base text-on-surface-variant mt-2 leading-relaxed">
+          If you'd rather start with a quick conversation, you can reach us using the details below.
+        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 relative z-10">
+<!-- Contact Point 1: Email -->
+<div class="p-6 rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col justify-between group hover:shadow-md transition-shadow">
+<div>
+<div class="w-12 h-12 rounded-xl bg-secondary-container text-on-secondary-container flex items-center justify-center mb-5">
+<span class="material-symbols-outlined text-2xl">mail</span>
+</div>
+<span class="text-xs uppercase tracking-wider font-semibold text-outline">Email Address</span>
+<p class="text-base font-semibold text-on-surface mt-1 break-all">
+              inquiries@oneworldonestop.com
+            </p>
+</div>
+<a class="mt-6 inline-flex items-center gap-1.5 text-xs font-semibold text-primary hover:text-primary-container" href="mailto:inquiries@oneworldonestop.com">
+<span class="">Send email message</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+<!-- Contact Point 2: Phone -->
+<div class="p-6 rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col justify-between group hover:shadow-md transition-shadow">
+<div>
+<div class="w-12 h-12 rounded-xl bg-secondary-container text-on-secondary-container flex items-center justify-center mb-5">
+<span class="material-symbols-outlined text-2xl">call</span>
+</div>
+<span class="text-xs uppercase tracking-wider font-semibold text-outline">Direct Phone</span>
+<p class="text-base font-semibold text-on-surface mt-1 leading-snug">
+              General Consultations Available Upon Inquiry
+            </p>
+</div>
+<span class="mt-6 inline-flex items-center gap-1.5 text-xs font-semibold text-secondary">
+<span class="">Scheduled via intro call</span>
+<span class="material-symbols-outlined text-sm">calendar_today</span>
+</span>
+</div>
+<!-- Contact Point 3: Location -->
+<div class="p-6 rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col justify-between group hover:shadow-md transition-shadow">
+<div>
+<div class="w-12 h-12 rounded-xl bg-secondary-container text-on-secondary-container flex items-center justify-center mb-5">
+<span class="material-symbols-outlined text-2xl">location_on</span>
+</div>
+<span class="text-xs uppercase tracking-wider font-semibold text-outline">Primary Presence</span>
+<p class="text-base font-semibold text-on-surface mt-1">
+              United States &amp; Global Project Coverage
+            </p>
+</div>
+<div class="mt-6 flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<span class="text-xs text-on-surface-variant font-medium">Distributed Multi-Timezone</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 4: What Happens Next? (Structured Timeline) -->
+<section class="w-full bg-surface-container-low py-16 lg:py-24">
+<div class="max-w-7xl mx-auto px-6 lg:px-12">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
+<div>
+<span class="text-xs uppercase tracking-widest font-semibold text-primary">Process Clarity</span>
+<h2 class="text-3xl sm:text-4xl font-headline font-bold text-on-surface mt-2 tracking-tight">
+            What happens next?
+          </h2>
+</div>
+<p class="text-sm text-on-surface-variant max-w-md">
+          We keep the initial onboarding simple and transparent so you have full clarity before any work begins.
+        </p>
+</div>
+<!-- 3-step structured timeline -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+<!-- Step 1 -->
+<div class="p-6 sm:p-8 rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col justify-between relative group hover:shadow-md transition-all">
+<div class="space-y-4">
+<div class="flex items-center justify-between">
+<span class="text-3xl font-headline font-bold text-primary">01</span>
+<span class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-base">search_insights</span>
+</span>
+</div>
+<h3 class="text-lg font-headline font-semibold text-on-surface">
+              We learn about your needs
+            </h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">
+              We review your inquiry and get a clearer picture of your goals, requirements, and timeline.
+            </p>
+</div>
+<div class="mt-8 pt-4 bg-surface-container-low/50 rounded-lg p-3">
+<span class="text-xs font-medium text-secondary">Output: Internal Scope Audit</span>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="p-6 sm:p-8 rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col justify-between relative group hover:shadow-md transition-all">
+<div class="space-y-4">
+<div class="flex items-center justify-between">
+<span class="text-3xl font-headline font-bold text-primary">02</span>
+<span class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-base">forum</span>
+</span>
+</div>
+<h3 class="text-lg font-headline font-semibold text-on-surface">
+              We discuss the right approach
+            </h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">
+              We connect with you to understand the details, answer your questions, and identify the support your project needs.
+            </p>
+</div>
+<div class="mt-8 pt-4 bg-surface-container-low/50 rounded-lg p-3">
+<span class="text-xs font-medium text-secondary">Output: 30-min Working Session</span>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="p-6 sm:p-8 rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col justify-between relative group hover:shadow-md transition-all">
+<div class="space-y-4">
+<div class="flex items-center justify-between">
+<span class="text-3xl font-headline font-bold text-primary">03</span>
+<span class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-base">task_alt</span>
+</span>
+</div>
+<h3 class="text-lg font-headline font-semibold text-on-surface">
+              We work out the next steps
+            </h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">
+              Once we understand the scope, we can discuss the proposed approach, timing, and any information needed to move forward.
+            </p>
+</div>
+<div class="mt-8 pt-4 bg-surface-container-low/50 rounded-lg p-3">
+<span class="text-xs font-medium text-secondary">Output: Scope, Schedule &amp; Execution Roadmap</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 5: Reassurance -->
+<section class="w-full max-w-7xl mx-auto px-6 lg:px-12 py-16 lg:py-20">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center rounded-3xl bg-secondary-fixed/40 p-6 sm:p-12 lg:p-16">
+<div class="lg:col-span-8 space-y-4">
+<div class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-on-secondary-fixed-variant">
+<span class="material-symbols-outlined text-base">lightbulb</span>
+          Collaborative Foundation
+        </div>
+<h2 class="text-3xl sm:text-4xl font-headline font-bold text-on-secondary-fixed leading-tight tracking-tight">
+          Not sure where to start?
+        </h2>
+<p class="text-base sm:text-lg text-on-secondary-fixed-variant font-normal leading-relaxed max-w-2xl">
+          That's perfectly fine. You may have a clear brief, a tight deadline, or just an idea that needs shaping. Tell us what you know so far. We'll take it from there.
+        </p>
+</div>
+<div class="lg:col-span-4 flex justify-start lg:justify-end">
+<a class="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-lg bg-primary text-on-primary font-semibold text-sm hover:bg-primary-container shadow-md transition-all" href="#inquiry-form">
+<span class="">Share Your Ideas</span>
+<span class="material-symbols-outlined text-sm">arrow_upward</span>
+</a>
+</div>
+</div>
+</section>
+<!-- Section 6: Final Anchor CTA -->
+<section class="w-full bg-surface-container-highest/60 py-20 lg:py-28 text-center">
+<div class="max-w-4xl mx-auto px-6 lg:px-12 space-y-8">
+<div class="w-16 h-16 rounded-full bg-primary/10 text-primary flex items-center justify-center mx-auto">
+<span class="material-symbols-outlined text-3xl">handshake</span>
+</div>
+<h2 class="text-3xl sm:text-5xl font-headline font-bold text-on-surface tracking-tight">
+        Let's bring your next project together.
+      </h2>
+<p class="text-base sm:text-lg text-on-surface-variant max-w-xl mx-auto leading-relaxed">
+        From initial concept and localized copy through to prepress accuracy and finished print delivery.
+      </p>
+<div class="pt-2">
+<button class="inline-flex items-center justify-center gap-3 px-10 py-4 rounded-lg bg-primary text-on-primary text-base font-semibold hover:bg-primary-container shadow-lg transition-all active:scale-[0.98]" onclick="scrollToForm()" type="button">
+<span class="">Discuss a Project</span>
+<span class="material-symbols-outlined text-lg">arrow_upward</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Interactive Logic for Form Demonstration & Smooth Navigation -->
+<script>
+    function scrollToForm() {
+      const formEl = document.getElementById('inquiry-form');
+      if (formEl) {
+        formEl.scrollIntoView({ behavior: 'smooth' });
+        const nameField = document.getElementById('full_name');
+        if (nameField) {
+          setTimeout(() => nameField.focus(), 600);
+        }
+      }
+    }
+
+    function handleFormSubmit(event) {
+      event.preventDefault();
+      const form = event.target;
+      const btn = document.getElementById('submit-btn');
+      const alertBox = document.getElementById('form-feedback-alert');
+
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
+
+      // Feedback animation state
+      btn.disabled = true;
+      btn.innerHTML = `<span class="inline-block animate-spin mr-2">⟳</span> Transmitting...`;
+
+      setTimeout(() => {
+        btn.disabled = false;
+        btn.innerHTML = `<span>Send Project Inquiry</span><span class="material-symbols-outlined text-[18px]">send</span>`;
+        if (alertBox) {
+          alertBox.classList.remove('hidden');
+          alertBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+        form.reset();
+      }, 700);
+    }
+  </script>
+</div></main>
+<footer class="w-full bg-surface-container-low mt-auto">
+  <div class="max-w-7xl mx-auto px-6 lg:px-12 py-14 lg:py-20">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8">
+      <div class="sm:col-span-2 lg:col-span-4 flex flex-col gap-5">
+        <a class="flex items-center gap-3" href="index.html"><img src="assets/osc-logo.png" alt="OSC One World One Stop – O'Sullivan Communications" width="286" height="98" class="h-14 w-auto"></a>
+        <p class="text-sm leading-relaxed text-on-surface-variant max-w-sm">Bringing content, language, creative design, and production together — from the first word to the finished product.</p>
+      </div>
+      <div class="lg:col-span-3 flex flex-col gap-4">
+        <span class="text-xs font-semibold tracking-wider uppercase text-on-surface">Navigation</span>
+        <nav class="flex flex-col gap-2.5" aria-label="Footer"><a class="text-sm text-on-surface-variant hover:text-on-surface transition-colors" href="index.html">Home</a><a class="text-sm text-on-surface-variant hover:text-on-surface transition-colors" href="services.html">Services</a><a class="text-sm text-on-surface-variant hover:text-on-surface transition-colors" href="industries.html">Industries</a><a class="text-sm text-on-surface-variant hover:text-on-surface transition-colors" href="our-work.html">Our Work</a><a class="text-sm text-on-surface-variant hover:text-on-surface transition-colors" href="about.html">About Us</a><a aria-current="page" class="text-sm text-primary font-medium transition-colors" href="contact.html">Discuss a Project</a></nav>
+      </div>
+      <div class="lg:col-span-3 flex flex-col gap-4">
+        <span class="text-xs font-semibold tracking-wider uppercase text-on-surface">Contact &amp; Inquiries</span>
+        <div class="flex flex-col gap-3 text-sm text-on-surface-variant">
+          <a class="text-on-surface hover:text-primary transition-colors font-medium break-all" href="mailto:inquiries@oneworldonestop.com">inquiries@oneworldonestop.com</a>
+          <p class="leading-relaxed">General inquiries, international partnerships, and production consultations.</p>
+        </div>
+      </div>
+      <div class="lg:col-span-2 flex flex-col gap-4">
+        <span class="text-xs font-semibold tracking-wider uppercase text-on-surface">Legal &amp; Standards</span>
+        <div class="flex flex-col gap-2.5 text-sm">
+          <a class="text-on-surface-variant hover:text-on-surface transition-colors" href="#">Privacy Policy</a>
+          <a class="text-on-surface-variant hover:text-on-surface transition-colors" href="#">Terms of Use</a>
+          <a class="text-on-surface-variant hover:text-on-surface transition-colors" href="#">Cookie Settings</a>
+        </div>
+      </div>
+    </div>
+    <div class="mt-12 lg:mt-16 bg-surface-container-high/40 rounded-lg p-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-on-surface-variant text-center sm:text-left">
+      <p>© 2026 O'Sullivan Communications. All rights reserved.</p>
+      <p class="font-medium text-on-surface tracking-wide">Commercial clarity, editorial craft, and production precision.</p>
+    </div>
+  </div>
+</footer>
+<script>
+(function () {
+  var btn = document.getElementById('menu-toggle');
+  var menu = document.getElementById('mobile-menu');
+  var icon = document.getElementById('menu-icon');
+  if (!btn || !menu) return;
+  function setOpen(open) {
+    menu.setAttribute('data-open', open ? 'true' : 'false');
+    menu.setAttribute('aria-hidden', open ? 'false' : 'true');
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    btn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    icon.textContent = open ? 'close' : 'menu';
+  }
+  btn.addEventListener('click', function () { setOpen(menu.getAttribute('data-open') !== 'true'); });
+  menu.addEventListener('click', function (e) { if (e.target.closest('a')) setOpen(false); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setOpen(false); });
+  document.addEventListener('click', function (e) { if (!e.target.closest('#site-header')) setOpen(false); });
+  window.addEventListener('resize', function () { if (window.innerWidth >= 1024) setOpen(false); });
+})();
+</script>
+
+<script>
+(function () {
+  var icons = [[/airline|flight|travel|boarding|passenger/i,'flight_takeoff'],[/cosmetic|skincare|perfume|luxury|beauty/i,'spa'],
+               [/consumer|retail|fmcg|electronics|supermarket/i,'inventory_2'],[/insurance|financial|policy/i,'description'],
+               [/press|print|proof|lithograph/i,'print'],[/typograph|multilingual|copy/i,'translate']];
+  function iconFor(t){ for (var i=0;i<icons.length;i++) if (icons[i][0].test(t)) return icons[i][1]; return 'palette'; }
+  function label(t){ var s=(t||'').split(/[,.:]/)[0].trim(); return s.length>70 ? s.slice(0,67)+'…' : s; }
+  function placeholder(t){
+    var d=document.createElement('div');
+    d.setAttribute('role','img'); d.setAttribute('aria-label', label(t) || 'Image');
+    d.style.cssText='display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:20px;text-align:center;'+
+      'background:linear-gradient(135deg,#d9e2ff 0%,#efedee 55%,#f9e37a 140%);color:#094cb2;min-height:100%;';
+    d.innerHTML='<span class="material-symbols-outlined" style="font-size:40px;opacity:.85">'+iconFor(t)+'</span>'+
+      '<span style="font:500 12px/1.4 Inter,system-ui,sans-serif;color:#434653;max-width:28ch">'+label(t)+'</span>';
+    return d;
+  }
+  function swap(img){
+    if (img.dataset.fallback) return; img.dataset.fallback='1';
+    var d=placeholder(img.getAttribute('data-alt')||img.alt);
+    d.className=img.className; d.classList.remove('object-cover');
+    if (!/\bh-(\d|full|auto|\[)/.test(img.className) && !/aspect-/.test(img.className)) d.style.minHeight='14rem';
+    img.replaceWith(d);
+  }
+  document.querySelectorAll('img').forEach(function(img){
+    if (img.complete && img.naturalWidth===0) swap(img); else img.addEventListener('error', function(){ swap(img); });
+  });
+  document.querySelectorAll('[style*="background-image"]').forEach(function(el){
+    var m=el.style.backgroundImage.match(/url\(["']?(.*?)["']?\)/); if(!m) return;
+    var t=new Image(); t.onerror=function(){ var p=placeholder(el.getAttribute('data-alt')); el.style.backgroundImage='none'; el.appendChild(p); p.style.height='100%'; }; t.src=m[1];
+  });
+})();
+</script>
+</body>
+</html>

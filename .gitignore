@@ -1,0 +1,3 @@
+# Copy package / source docs
+assets/*.docx
+*.docx

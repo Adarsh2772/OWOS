@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EMMIS CMS | Inflight Menu Content Automation</title>
+<meta name="description" content="Decouple culinary copywriting from layout design with component-based XML authoring, automated document composition, and translation memory.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Public+Sans:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=block">
+<link rel="stylesheet" href="../assets/styles.css">
+<style>
+  html { scroll-behavior: smooth; scroll-padding-top: 96px; overflow-x: clip; }
+  body { margin: 0; overflow-x: clip; overscroll-behavior-y: none; }
+  img { max-width: 100%; }
+  ::-webkit-scrollbar { display: none; }
+  html { scrollbar-width: none; }
+  .material-symbols-outlined { font-family: 'Material Symbols Outlined'; font-weight: normal; font-style: normal; line-height: 1; letter-spacing: normal; text-transform: none; white-space: nowrap; direction: ltr; -webkit-font-smoothing: antialiased; }
+  main > div > :first-child { margin-top: 0 !important; }
+  #mobile-menu { transition: opacity .2s ease, transform .2s ease; }
+  #mobile-menu[data-open="false"] { opacity: 0; transform: translateY(-8px); pointer-events: none; }
+  #mobile-menu[data-open="true"] { opacity: 1; transform: none; }
+  a:focus-visible, button:focus-visible { outline: 2px solid #094cb2; outline-offset: 2px; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition: none !important; animation: none !important; } }
+</style>
+</head>
+<body class="bg-surface font-body text-on-surface min-h-screen flex flex-col antialiased selection:bg-secondary-container selection:text-on-secondary-container">
+<header id="site-header" class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/95 backdrop-blur-md shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
+  <div class="h-16 sm:h-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 flex items-center justify-between gap-4 lg:gap-8">
+    <a class="flex items-center gap-3 group min-w-0" href="../index.html" aria-label="O'Sullivan Communications – home">
+      <img src="../assets/osc-logo.png" alt="OSC One World One Stop – O'Sullivan Communications" width="286" height="98" class="h-10 sm:h-12 w-auto shrink-0">
+    </a>
+    <nav class="hidden lg:flex items-center gap-8 xl:gap-10" aria-label="Main"><a class="text-sm text-on-surface-variant hover:text-on-surface transition-colors" href="../index.html">Home</a><a class="text-sm text-on-surface-variant hover:text-on-surface transition-colors" href="../solutions.html">Solutions</a><a aria-current="page" class="text-sm text-primary font-semibold transition-colors" href="../platform.html">Our Platform</a><a class="text-sm text-on-surface-variant hover:text-on-surface transition-colors" href="../about.html">About OSC</a></nav>
+    <div class="flex items-center gap-3 sm:gap-4 shrink-0">
+      <a class="hidden sm:inline-flex items-center justify-center px-5 lg:px-6 py-2.5 rounded bg-primary text-on-primary text-sm font-medium hover:bg-primary-container transition-colors shadow-[0_1px_8px_rgba(0,0,0,0.04)]" href="../contact.html">Discuss Your Project</a>
+      <a class="hidden sm:inline-flex items-center justify-center px-4 py-2.5 rounded border border-outline-variant text-on-surface text-sm font-medium hover:bg-surface-container transition-colors" href="#" rel="nofollow">Client Access</a>
+      <button id="menu-toggle" type="button" class="lg:hidden inline-flex items-center justify-center w-10 h-10 rounded-lg text-on-surface hover:bg-surface-container transition-colors" aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu">
+        <span class="material-symbols-outlined text-2xl" id="menu-icon">menu</span>
+      </button>
+    </div>
+  </div>
+  <div id="mobile-menu" data-open="false" class="lg:hidden absolute left-0 right-0 top-full bg-surface-container-lowest shadow-lg max-h-[calc(100vh-4rem)] overflow-y-auto" aria-hidden="true">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex flex-col gap-1" aria-label="Mobile"><a class="flex items-center justify-between px-4 py-3 rounded-lg text-base text-on-surface hover:bg-surface-container-low transition-colors" href="../index.html">Home</a><a class="flex items-center justify-between px-4 py-3 rounded-lg text-base text-on-surface hover:bg-surface-container-low transition-colors" href="../solutions.html">Solutions</a><a aria-current="page" class="flex items-center justify-between px-4 py-3 rounded-lg text-base bg-surface-container text-primary font-semibold transition-colors" href="../platform.html">Our Platform</a><a class="flex items-center justify-between px-4 py-3 rounded-lg text-base text-on-surface hover:bg-surface-container-low transition-colors" href="../about.html">About OSC</a><a class="flex items-center justify-between px-4 py-3 rounded-lg text-base text-on-surface hover:bg-surface-container-low transition-colors" href="../contact.html">Contact</a><a class="flex items-center justify-between px-4 py-3 rounded-lg text-base text-on-surface hover:bg-surface-container-low transition-colors" href="#" rel="nofollow">Client Access</a>
+      <a class="mt-3 inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded bg-primary text-on-primary text-sm font-semibold hover:bg-primary-container transition-colors" href="../contact.html">Discuss Your Project<span class="material-symbols-outlined text-lg">arrow_forward</span></a>
+    </nav>
+  </div>
+</header>
+<main class="w-full pt-16 sm:pt-20 bg-surface flex-1"><div class="flex flex-col w-full">
+
+<!-- SECTION 1: HERO -->
+<section class="relative w-full overflow-hidden bg-surface-container-low py-20 lg:py-28">
+<div class="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+<div class="lg:col-span-7 flex flex-col gap-6">
+<div class="inline-flex items-center gap-2 self-start px-3 py-1 rounded bg-secondary-container text-on-secondary-container text-xs font-semibold uppercase tracking-wider">
+<span class="material-symbols-outlined text-sm">visibility</span>
+            Selected Portfolio &amp; Case Studies
+          </div>
+<h1 class="text-4xl sm:text-5xl lg:text-6xl font-headline font-bold text-on-surface tracking-tight leading-[1.12]">
+            EMMIS CMS — Modular Content Authoring and Automated Multi-Channel Publishing
+          </h1>
+<p class="text-base sm:text-lg text-on-surface-variant max-w-xl leading-relaxed">
+            Every project has its own needs. Explore how content, design, and production can work together to create materials with a clear purpose.
+          </p>
+<div class="pt-2 flex flex-wrap items-center gap-4">
+<a class="inline-flex items-center gap-2 px-7 py-3 rounded bg-primary text-on-primary text-sm font-semibold hover:bg-primary-container hover:text-on-primary transition-all shadow-md hover:shadow-lg" href="../contact.html">
+<span class="">Discuss Your Project</span>
+<span class="material-symbols-outlined text-base">arrow_forward</span>
+</a>
+<div class="flex items-center gap-2 text-xs font-medium text-on-surface-variant">
+<span class="inline-block w-2 h-2 rounded-full bg-tertiary"></span>
+              Synchronized Content, Craft &amp; Press
+            </div>
+</div>
+</div>
+<div class="lg:col-span-5 relative">
+<div class="relative rounded-xl overflow-hidden shadow-xl bg-surface-container-lowest">
+<img class="w-full h-80 sm:h-96 object-cover" data-alt="Close-up editorial photograph of immaculate printed brand materials, foil-stamped swatch books, tactile paper stocks, and multilingual type proofs neatly arranged on an architect studio desk in soft natural morning light with warm violet and neutral studio tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuClNEE1REwAjqxaSoUam_AdPpOo3Vv7TvW_2yoAcUzHFOVHz696dVDNjDDnlfU33Z9-0E9JGaa9YAQkkddDAIdVk_hzO35H0R-ZknFE6JwqQKphMZTXXDxTPlmA-T3552fOu9HYdSkmtEhMx2eH6Qn4LFWs_IhAWlkQVSfSq0S1EM1E3YnDB6hYWMvxvjc7VoNkvJ6quzeQwLGvRto9kzu2MjVOJjIb6Ctjb5xJ7aqdRHtLPIA7LO-gng">
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/60 via-transparent to-transparent flex items-end p-6">
+<div class="flex flex-col text-on-primary">
+<span class="text-xs uppercase font-mono tracking-widest text-primary-fixed">Production Detail</span>
+<span class="text-sm font-medium">Pre-press calibration &amp; precision editorial layout</span>
+</div>
+</div>
+</div>
+<div class="absolute -bottom-6 -left-4 lg:-left-6 bg-surface-container-lowest p-5 rounded-lg shadow-lg hidden sm:flex items-center gap-4">
+<div class="w-12 h-12 rounded-lg bg-primary-fixed flex items-center justify-center text-on-primary-fixed font-bold text-lg font-mono">
+              99.8%
+            </div>
+<div>
+<p class="text-xs font-bold text-on-surface">First-Pass Press Approval</p>
+<p class="text-xs text-on-surface-variant">Synchronized localization</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 2: INTRODUCTION -->
+<section class="w-full py-16 lg:py-20 bg-surface">
+<div class="max-w-7xl mx-auto px-6 lg:px-12">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<div class="lg:col-span-4">
+<span class="text-xs font-mono uppercase tracking-widest text-tertiary">Portfolio Overview</span>
+<h2 class="text-2xl sm:text-3xl font-headline font-semibold text-on-surface mt-2 tracking-tight">
+            Decouple culinary and technical copywriting from layout mechanics—author modular content once and generate print signatures, digital IFE feeds, and localized editions automatically.
+          </h2>
+</div>
+<div class="lg:col-span-8">
+<p class="text-lg sm:text-xl text-on-surface-variant leading-relaxed">
+            From the message and visual layout to the preparation of the final materials, each stage plays a part in the result. Our work reflects the care and coordination needed to bring those parts together.
+          </p>
+<div class="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-4">
+<div class="p-4 rounded-lg bg-surface-container-low flex flex-col">
+<span class="text-xs font-mono text-on-surface-variant">Stage 01</span>
+<span class="text-sm font-semibold text-on-surface mt-1">Editorial &amp; Translation</span>
+</div>
+<div class="p-4 rounded-lg bg-surface-container-low flex flex-col">
+<span class="text-xs font-mono text-on-surface-variant">Stage 02</span>
+<span class="text-sm font-semibold text-on-surface mt-1">Layout &amp; Typesetting</span>
+</div>
+<div class="p-4 rounded-lg bg-surface-container-low flex flex-col">
+<span class="text-xs font-mono text-on-surface-variant">Stage 03</span>
+<span class="text-sm font-semibold text-on-surface mt-1">Prepress &amp; Profiling</span>
+</div>
+<div class="p-4 rounded-lg bg-surface-container-low flex flex-col">
+<span class="text-xs font-mono text-on-surface-variant">Stage 04</span>
+<span class="text-sm font-semibold text-on-surface mt-1">Fabrication Delivery</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 3: PROJECT GALLERY (PREMIUM ASYMMETRICAL GRID) -->
+<section class="w-full py-16 lg:py-24 bg-surface-container-low">
+<div class="max-w-7xl mx-auto px-6 lg:px-12">
+<div class="flex flex-col sm:flex-row items-start sm:items-end justify-between gap-4 mb-10">
+<div>
+<span class="text-xs font-mono uppercase tracking-widest text-primary">Sector Showcases</span>
+<h3 class="text-2xl sm:text-3xl font-headline font-semibold text-on-surface mt-1 tracking-tight">
+            EMMIS Platform Engine
+          </h3>
+</div>
+<div class="px-3.5 py-1.5 rounded bg-surface-container-highest text-on-surface-variant text-xs font-mono flex items-center gap-1.5">
+<span class="material-symbols-outlined text-xs text-tertiary">info</span>
+          [Illustrative Case Studies — Awaiting Client Verification]
+        </div>
+</div>
+<!-- Asymmetric Bento Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8">
+<!-- Card 1: Airlines & Travel (Large format) -->
+<div class="lg:col-span-7 rounded-xl bg-surface-container-lowest p-6 sm:p-8 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+<div>
+<div class="flex flex-wrap items-center justify-between gap-2 mb-4">
+<span class="text-xs font-semibold px-2.5 py-1 rounded bg-secondary-container text-on-secondary-container">Airlines &amp; Travel</span>
+<span class="text-xs font-mono text-on-surface-variant">Case Reference 01</span>
+</div>
+<h4 class="text-2xl font-headline font-bold text-on-surface tracking-tight">
+              Travel Communication Materials
+            </h4>
+<p class="text-sm text-on-surface-variant mt-3 leading-relaxed">
+              Customer-facing materials designed to communicate clearly and support a consistent brand experience.
+            </p>
+</div>
+<div class="my-6 rounded-lg overflow-hidden bg-surface-container">
+<img class="w-full h-56 object-cover" data-alt="High quality editorial photography showing airline boarding kits, multilingual passenger safety guides, passport wallets, and premium airport terminal signage mockups with crisp deep purple and gold accents laid flat on a neutral background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDImCg3heQxjJfBoa-dNVCJvKsQM3Gk71NisthdNpx0Hnorg0bRJZJSs1Il985UdHKfRCIZZlUyYuWD-AjePbZhEdu9SDi3LuXIOLaHwShxRHTcKioMsnS5x8l8fvBbzg2_JhZLn5ZlitWn27LmBYxTUXdcTebCwBpHg32GXBV956IVh2bAPA16Bz0ql6QRKmt4SearSUswrNLPP2PBKnoesbQHMT_lLnR1B6egohjTWct3CZKQ1k73oA">
+</div>
+<div class="pt-4 bg-surface-container-low/50 rounded-lg p-4">
+<span class="text-xs font-mono uppercase tracking-wider text-on-surface-variant block mb-2">Key Deliverables</span>
+<div class="flex flex-wrap gap-2">
+<span class="text-xs px-2.5 py-1 rounded bg-surface-container-lowest text-on-surface font-medium">Multilingual In-Flight Collateral</span>
+<span class="text-xs px-2.5 py-1 rounded bg-surface-container-lowest text-on-surface font-medium">Gate Signage Adaptation</span>
+<span class="text-xs px-2.5 py-1 rounded bg-surface-container-lowest text-on-surface font-medium">Route Launch Guides</span>
+</div>
+</div>
+</div>
+<!-- Card 2: Cosmetics & Luxury -->
+<div class="lg:col-span-5 rounded-xl bg-surface-container-lowest p-6 sm:p-8 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+<div>
+<div class="flex flex-wrap items-center justify-between gap-2 mb-4">
+<span class="text-xs font-semibold px-2.5 py-1 rounded bg-tertiary-fixed text-on-tertiary-fixed">Cosmetics &amp; Luxury</span>
+<span class="text-xs font-mono text-on-surface-variant">Case Reference 02</span>
+</div>
+<h4 class="text-2xl font-headline font-bold text-on-surface tracking-tight">
+              Premium Brand Materials
+            </h4>
+<p class="text-sm text-on-surface-variant mt-3 leading-relaxed">
+              Brand-sensitive content and design for product-related communication.
+            </p>
+</div>
+<div class="my-6 rounded-lg overflow-hidden bg-surface-container">
+<img class="w-full h-56 object-cover" data-alt="Luxury cosmetics packaging mockups featuring metallic hot-stamp typography, heavy textured linen paper box sleeves, and multilingual ingredient accordions shot in cinematic studio lighting with subtle gold reflections." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAIWtuY343qUST6c5nZ3tOikkFOuoLFq4K5x5w5sAjHcdYsK4ayJXJzg0fpRPAL8xcph9xuSHrh46yRtNMV4P8Qq0fS8Q5ZptWVODyG8NFo63gJtunEY4UUVtUsxZibACl0-BjVeedm9VUdzx7IIbRVXbFilGDJk3aHVRzgBtMAqRKSTdkIa4i9aO707jcqSU9i9WrXGps_HVGd063cRN2U0nQeLgiFMlEZSFCtuzzclXVslbCbu64gLw">
+</div>
+<div class="pt-4 bg-surface-container-low/50 rounded-lg p-4">
+<span class="text-xs font-mono uppercase tracking-wider text-on-surface-variant block mb-2">Key Deliverables</span>
+<div class="flex flex-wrap gap-2">
+<span class="text-xs px-2.5 py-1 rounded bg-surface-container-lowest text-on-surface font-medium">Tactile Packaging</span>
+<span class="text-xs px-2.5 py-1 rounded bg-surface-container-lowest text-on-surface font-medium">Foil-Stamped Lookbooks</span>
+<span class="text-xs px-2.5 py-1 rounded bg-surface-container-lowest text-on-surface font-medium">Localized Editorial Inserts</span>
+</div>
+</div>
+</div>
+<!-- Card 3: Consumer Products -->
+<div class="lg:col-span-5 rounded-xl bg-surface-container-lowest p-6 sm:p-8 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+<div>
+<div class="flex flex-wrap items-center justify-between gap-2 mb-4">
+<span class="text-xs font-semibold px-2.5 py-1 rounded bg-secondary-container text-on-secondary-container">Consumer Products</span>
+<span class="text-xs font-mono text-on-surface-variant">Case Reference 03</span>
+</div>
+<h4 class="text-2xl font-headline font-bold text-on-surface tracking-tight">
+              Product Marketing Materials
+            </h4>
+<p class="text-sm text-on-surface-variant mt-3 leading-relaxed">
+              Content and creative materials developed around product messaging and brand consistency.
+            </p>
+</div>
+<div class="my-6 rounded-lg overflow-hidden bg-surface-container">
+<img class="w-full h-56 object-cover" data-alt="Multiple consumer electronics retail packages arranged neatly showing harmonized typography in 8 languages, barcode regulatory labeling, and shelf display cards in a bright modern environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWVI0n6sKZer2fmNzm8m9VX4-q7RQJ_QzAKvI7tRJIk17SnjbNqqqS4uOaPIThf1JbZoOcAk4QipfRiDB42MK2-0wjRPWfOxsCO7Y9bkBt1TPpl7cP2PyqsoGOs6LZu869hEWcsCYcIjbvJheP3Gy86OMQNww-T6HDw0lW6aL0ruYFGveewHlRRdixWL95LsESemCLys0FR3eQWSbITmks5txlSoZt8IWH9gs2dUGDdgPbQqDf6VkOOQ">
+</div>
+<div class="pt-4 bg-surface-container-low/50 rounded-lg p-4">
+<span class="text-xs font-mono uppercase tracking-wider text-on-surface-variant block mb-2">Key Deliverables</span>
+<div class="flex flex-wrap gap-2">
+<span class="text-xs px-2.5 py-1 rounded bg-surface-container-lowest text-on-surface font-medium">Multi-Market Retail Packaging</span>
+<span class="text-xs px-2.5 py-1 rounded bg-surface-container-lowest text-on-surface font-medium">Omnichannel Display Specs</span>
+<span class="text-xs px-2.5 py-1 rounded bg-surface-container-lowest text-on-surface font-medium">8-Language Localization</span>
+</div>
+</div>
+</div>
+<!-- Card 4: Insurance (Large format) -->
+<div class="lg:col-span-7 rounded-xl bg-surface-container-lowest p-6 sm:p-8 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+<div>
+<div class="flex flex-wrap items-center justify-between gap-2 mb-4">
+<span class="text-xs font-semibold px-2.5 py-1 rounded bg-surface-container-highest text-on-surface">Insurance</span>
+<span class="text-xs font-mono text-on-surface-variant">Case Reference 04</span>
+</div>
+<h4 class="text-2xl font-headline font-bold text-on-surface tracking-tight">
+              Customer Information Materials
+            </h4>
+<p class="text-sm text-on-surface-variant mt-3 leading-relaxed">
+              Clear, carefully prepared materials for customer-facing communication.
+            </p>
+</div>
+<div class="my-6 rounded-lg overflow-hidden bg-surface-container">
+<img class="w-full h-56 object-cover" data-alt="Clear financial policy document mockups with neat typographic tables, highlighted data graphics, easy-to-read infographics, and spiral bound customer guides on a clean desk." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPwaofPvKKJGuXFmAS_8BFYGWMkDLxo_ykeuX9iX258pg22DMHFEpOW_EBe-PF5jOWdAxfRTeWZvWb55b0qmBGzoD8fqyrL_SGrdIy91qtKCAhAtokmavKhx6W7dzlaaaBQ6lbWID8UNFMTUTOqT8XCEwFn__RPjEU_Qh4iV29cTAV6XUMh99x1YNVasT8zdXIl7S-YWw0a_XZpbmeh637QhyOMWD_vRCMc7CuA-Tj0OwLRKrxgrndnw">
+</div>
+<div class="pt-4 bg-surface-container-low/50 rounded-lg p-4">
+<span class="text-xs font-mono uppercase tracking-wider text-on-surface-variant block mb-2">Key Deliverables</span>
+<div class="flex flex-wrap gap-2">
+<span class="text-xs px-2.5 py-1 rounded bg-surface-container-lowest text-on-surface font-medium">Policy Explainer Kits</span>
+<span class="text-xs px-2.5 py-1 rounded bg-surface-container-lowest text-on-surface font-medium">Accessible Document Formats</span>
+<span class="text-xs px-2.5 py-1 rounded bg-surface-container-lowest text-on-surface font-medium">Rate Card Review Systems</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 4: FEATURED CASE STUDY TEMPLATE (FULL EDITORIAL DEEP-DIVE) -->
+<section class="w-full py-20 lg:py-28 bg-surface">
+<div class="max-w-7xl mx-auto px-6 lg:px-12">
+<!-- Section Tag & Title -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4 pb-12">
+<div>
+<span class="text-xs font-mono uppercase tracking-widest text-primary">In-Depth Case Study</span>
+<h2 class="text-3xl sm:text-4xl font-headline font-bold text-on-surface mt-2 tracking-tight">
+            EMMIS CMS
+          </h2>
+</div>
+<div class="flex items-center gap-3 text-xs font-mono text-on-surface-variant bg-surface-container px-4 py-2 rounded-lg">
+<span class="w-2.5 h-2.5 rounded-full bg-primary animate-pulse"></span>
+<span class="">Verified Production Architecture</span>
+</div>
+</div>
+<!-- 2-Column Editorial Breakdown -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+<!-- Left Column: Editorial narrative & deliverables -->
+<div class="lg:col-span-7 flex flex-col gap-10">
+<!-- Overview block -->
+<div class="p-6 rounded-xl bg-surface-container-low flex flex-col gap-4">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div>
+<span class="text-xs font-mono uppercase text-on-surface-variant block">Client / Project</span>
+<span class="text-sm font-semibold text-on-surface">[Global Travel Brand — Illustrative Project]</span>
+</div>
+<div>
+<span class="text-xs font-mono uppercase text-on-surface-variant block">Sector</span>
+<span class="text-sm font-semibold text-on-surface">Cross-Border Airline &amp; Hospitality</span>
+</div>
+</div>
+</div>
+<!-- Reusable Modular Components -->
+<div class="flex flex-col gap-3">
+<div class="flex items-center gap-3">
+<span class="flex items-center justify-center w-7 h-7 rounded-full bg-error-container text-on-error-container text-xs font-bold font-mono">01</span>
+<h3 class="text-lg font-headline font-semibold text-on-surface">Reusable Modular Components</h3>
+</div>
+<p class="text-base text-on-surface-variant leading-relaxed pl-0 sm:pl-10">
+              Organizes culinary descriptions, meal codes, wine notes, and dietary disclosures into independent, reusable assets, enabling instant seasonal dish rotation without re-authoring copy.
+            </p>
+</div>
+<!-- Collaborative Editorial Interface -->
+<div class="flex flex-col gap-3">
+<div class="flex items-center gap-3">
+<span class="flex items-center justify-center w-7 h-7 rounded-full bg-secondary-container text-on-secondary-container text-xs font-bold font-mono">02</span>
+<h3 class="text-lg font-headline font-semibold text-on-surface">Collaborative Editorial Interface</h3>
+</div>
+<p class="text-base text-on-surface-variant leading-relaxed pl-0 sm:pl-10">
+              Web-based workspace supporting projects from order entry through approval, with role-based permissions, revision audit trails, real-time layout previews, and dependency tracking.
+            </p>
+</div>
+<!-- Structured XML Architecture Without the Complexity -->
+<div class="flex flex-col gap-3">
+<div class="flex items-center gap-3">
+<span class="flex items-center justify-center w-7 h-7 rounded-full bg-primary-fixed text-on-primary-fixed text-xs font-bold font-mono">03</span>
+<h3 class="text-lg font-headline font-semibold text-on-surface">Structured XML Architecture Without the Complexity</h3>
+</div>
+<p class="text-base text-on-surface-variant leading-relaxed pl-0 sm:pl-10">
+              Behind EMMIS's intuitive browser interface sits a modular XML component architecture. By storing every dish description, wine note, and allergen warning as structured XML components, EMMIS separates content from layout geometry. When a single ingredient or regulatory warning changes, server-side publishing automatically updates and re-typesets every affected route, cabin class, and language variant.
+            </p>
+</div>
+<!-- Services Involved -->
+<div class="pt-6 bg-surface-container-lowest p-6 rounded-xl shadow-sm">
+<span class="text-xs font-mono uppercase tracking-wider text-on-surface-variant block mb-4">Services Involved in Execution</span>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-primary text-lg shrink-0">translate</span>
+<span class="text-xs font-medium text-on-surface leading-snug">Multilingual Translation &amp; Localization</span>
+</div>
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-primary text-lg shrink-0">format_shapes</span>
+<span class="text-xs font-medium text-on-surface leading-snug">Editorial Layout &amp; Typesetting</span>
+</div>
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-primary text-lg shrink-0">print</span>
+<span class="text-xs font-medium text-on-surface leading-snug">Prepress File Verification &amp; Color Profiling</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Rich Visual Specs & Swatches Mockup -->
+<div class="lg:col-span-5 flex flex-col gap-6">
+<div class="rounded-xl overflow-hidden shadow-lg bg-surface-container-lowest">
+<img class="w-full h-80 object-cover" data-alt="High angle multi-page editorial spread mockup showing open airline destination handbook with typography comparison columns in English, French, Japanese, German, and Spanish with color swatches and paper stock samples laid out beside it." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgWIeuPLF8jA6cmy2XKu24Ig-iDX0-9JPT2oUE8FpwgaaRCjuDecJ2y7r1bZraAy7Wm4XFRjko7-olhROipoCTS93xFyLM4Jqg1OGFCUhQsAN6q_faP99Krht9MewUR1cc1J2OECaTD2qsiRJifitMYz8pcY-ha5IFElxlH-4uEzLyhP6SLLzptqo1QIwsQb57hLwj_L784eW0VE2tYckxWrxIs6Oqq6ExIQ60ox178ul3pbNXZBvvkA">
+<div class="p-6 bg-surface-container-lowest">
+<div class="flex flex-wrap items-center justify-between gap-2 pb-3">
+<span class="text-xs font-mono font-semibold text-on-surface">Spec Sheet 48-B / Spread Layout</span>
+<span class="text-xs font-mono text-tertiary">ISO 12647-2 Certified</span>
+</div>
+<p class="text-xs text-on-surface-variant leading-relaxed">
+                Multi-page spread layout calibrated for five alphabets: Latin, Kanji, and Cyrillic line lengths matched through proportional leading algorithms.
+              </p>
+</div>
+</div>
+<!-- Spec cards grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div class="p-4 rounded-lg bg-surface-container-low flex flex-col gap-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm text-primary">straighten</span>
+<span class="text-xs font-mono uppercase text-on-surface-variant">Paper Stock Swatch</span>
+</div>
+<span class="text-sm font-semibold text-on-surface">170gsm Silk Uncoated</span>
+<span class="text-xs text-on-surface-variant">FSC-Certified, Opacity 98%</span>
+</div>
+<div class="p-4 rounded-lg bg-surface-container-low flex flex-col gap-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm text-primary">palette</span>
+<span class="text-xs font-mono uppercase text-on-surface-variant">Color Profiling</span>
+</div>
+<span class="text-sm font-semibold text-on-surface">FOGRA51 Offset</span>
+<span class="text-xs text-on-surface-variant">Delta-E &lt; 1.2 across hubs</span>
+</div>
+</div>
+<!-- Visual Typography Comparison Scale -->
+<div class="p-5 rounded-lg bg-surface-container-lowest shadow-sm flex flex-col gap-3">
+<span class="text-xs font-mono uppercase tracking-wider text-on-surface-variant">Typography Scale Comparison</span>
+<div class="space-y-2 text-xs">
+<div class="flex items-center justify-between gap-3">
+<span class="font-medium text-on-surface">Primary Header (EN/FR/DE)</span>
+<span class="font-mono text-on-surface-variant">32pt / 38pt Auto</span>
+</div>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-[85%]"></div>
+</div>
+<div class="flex items-center justify-between gap-3 pt-1">
+<span class="font-medium text-on-surface">Complex Script (JP/ZH)</span>
+<span class="font-mono text-on-surface-variant">30pt / 42pt Scaled</span>
+</div>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full overflow-hidden">
+<div class="bg-tertiary h-full w-[72%]"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 5: WHAT CONNECTS THE WORK -->
+<section class="w-full py-20 lg:py-24 bg-surface-container-low">
+<div class="max-w-7xl mx-auto px-6 lg:px-12">
+<div class="max-w-2xl mb-14">
+<span class="text-xs font-mono uppercase tracking-widest text-primary">Guiding Philosophy</span>
+<h2 class="text-3xl sm:text-4xl font-headline font-bold text-on-surface mt-2 tracking-tight">
+          Explore the full EMMIS ecosystem on Our Platform.
+        </h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Principle 1 -->
+<div class="rounded-xl bg-surface-container-lowest p-8 shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div class="flex flex-col gap-4">
+<div class="w-12 h-12 rounded-lg bg-primary-fixed flex items-center justify-center text-on-primary-fixed">
+<span class="material-symbols-outlined text-2xl">target</span>
+</div>
+<div class="flex flex-wrap items-baseline gap-x-2 gap-y-1">
+<span class="text-xs font-mono text-tertiary">Principle 01</span>
+<h3 class="text-xl font-headline font-bold text-on-surface">Content with purpose</h3>
+</div>
+<p class="text-sm text-on-surface-variant leading-relaxed">
+              The message should serve the people it is meant to reach.
+            </p>
+</div>
+<div class="pt-6 mt-6 bg-surface-container-low/40 rounded p-3 text-xs text-on-surface-variant">
+            Precision copyediting, cultural adaptation, and audience-first clarity.
+          </div>
+</div>
+<!-- Principle 2 -->
+<div class="rounded-xl bg-surface-container-lowest p-8 shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div class="flex flex-col gap-4">
+<div class="w-12 h-12 rounded-lg bg-secondary-container flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined text-2xl">style</span>
+</div>
+<div class="flex flex-wrap items-baseline gap-x-2 gap-y-1">
+<span class="text-xs font-mono text-tertiary">Principle 02</span>
+<h3 class="text-xl font-headline font-bold text-on-surface">Design that supports the message</h3>
+</div>
+<p class="text-sm text-on-surface-variant leading-relaxed">
+              Every visual decision should help the content do its job.
+            </p>
+</div>
+<div class="pt-6 mt-6 bg-surface-container-low/40 rounded p-3 text-xs text-on-surface-variant">
+            Typographic hierarchy, informational balance, and uncompromised legibility.
+          </div>
+</div>
+<!-- Principle 3 -->
+<div class="rounded-xl bg-surface-container-lowest p-8 shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div class="flex flex-col gap-4">
+<div class="w-12 h-12 rounded-lg bg-tertiary-fixed flex items-center justify-center text-on-tertiary-fixed">
+<span class="material-symbols-outlined text-2xl">fact_check</span>
+</div>
+<div class="flex flex-wrap items-baseline gap-x-2 gap-y-1">
+<span class="text-xs font-mono text-tertiary">Principle 03</span>
+<h3 class="text-xl font-headline font-bold text-on-surface">Care across the process</h3>
+</div>
+<p class="text-sm text-on-surface-variant leading-relaxed">
+              The details matter from the first brief to the final deliverables.
+            </p>
+</div>
+<div class="pt-6 mt-6 bg-surface-container-low/40 rounded p-3 text-xs text-on-surface-variant">
+            Rigorous prepress calibration, substrate testing, and zero-error tolerances.
+          </div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 6: CLOSING CTA -->
+<section class="w-full py-20 lg:py-24 bg-surface">
+<div class="max-w-7xl mx-auto px-6 lg:px-12">
+<div class="rounded-2xl bg-gradient-to-br from-primary via-primary-container to-secondary p-6 sm:p-14 lg:p-16 text-on-primary shadow-xl relative overflow-hidden">
+<div class="relative z-10 max-w-2xl flex flex-col gap-6">
+<span class="text-xs font-mono uppercase tracking-widest text-primary-fixed">Initiate Collaboration</span>
+<h2 class="text-3xl sm:text-4xl lg:text-5xl font-headline font-bold tracking-tight text-on-primary leading-tight">
+            See Content Automation in Action
+          </h2>
+<p class="text-base sm:text-lg text-primary-fixed leading-relaxed">
+            Tell us what you're planning. We'll help you explore the services and next steps your project may need.
+          </p>
+<div class="pt-2 flex flex-wrap items-center gap-4">
+<a class="inline-flex items-center gap-2 px-8 py-3.5 rounded bg-surface text-on-surface text-sm font-semibold hover:bg-surface-bright transition-all shadow-md hover:shadow-lg" href="../contact.html">
+<span class="">Discuss Your Project</span>
+<span class="material-symbols-outlined text-base">arrow_forward</span>
+</a>
+<span class="text-xs text-primary-fixed font-medium">Direct review with our production directors</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div></main>
+<footer class="w-full bg-surface-container-low mt-auto">
+  <div class="max-w-7xl mx-auto px-6 lg:px-12 py-14 lg:py-20">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8">
+      <div class="sm:col-span-2 lg:col-span-4 flex flex-col gap-5">
+        <a class="flex items-center gap-3" href="../index.html"><img src="../assets/osc-logo.png" alt="OSC One World One Stop – O'Sullivan Communications" width="286" height="98" class="h-14 w-auto"></a>
+        <p class="text-sm leading-relaxed text-on-surface-variant max-w-sm">O'Sullivan Communications (OSC) — Single-source global translation, inflight menu programs, and commercial publishing, from concept to completion.</p>
+      </div>
+      <div class="lg:col-span-3 flex flex-col gap-4">
+        <span class="text-xs font-semibold tracking-wider uppercase text-on-surface">Navigation</span>
+        <nav class="flex flex-col gap-2.5" aria-label="Footer"><a class="text-sm text-on-surface-variant hover:text-on-surface transition-colors" href="../index.html">Home</a><a class="text-sm text-on-surface-variant hover:text-on-surface transition-colors" href="../solutions.html">Solutions</a><a aria-current="page" class="text-sm text-primary font-medium transition-colors" href="../platform.html">Our Platform</a><a class="text-sm text-on-surface-variant hover:text-on-surface transition-colors" href="../about.html">About OSC</a><a class="text-sm text-on-surface-variant hover:text-on-surface transition-colors" href="../contact.html">Discuss Your Project</a></nav>
+      </div>
+      <div class="lg:col-span-3 flex flex-col gap-4">
+        <span class="text-xs font-semibold tracking-wider uppercase text-on-surface">Contact &amp; Inquiries</span>
+        <div class="flex flex-col gap-3 text-sm text-on-surface-variant">
+          <a class="text-on-surface hover:text-primary transition-colors font-medium break-all" href="mailto:inquiries@oneworldonestop.com">inquiries@oneworldonestop.com</a>
+          <p class="leading-relaxed">General inquiries, international partnerships, and production consultations.</p>
+        </div>
+      </div>
+      <div class="lg:col-span-2 flex flex-col gap-4">
+        <span class="text-xs font-semibold tracking-wider uppercase text-on-surface">Legal &amp; Standards</span>
+        <div class="flex flex-col gap-2.5 text-sm">
+          <a class="text-on-surface-variant hover:text-on-surface transition-colors" href="#">Privacy Policy</a>
+          <a class="text-on-surface-variant hover:text-on-surface transition-colors" href="#">Terms of Use</a>
+          <a class="text-on-surface-variant hover:text-on-surface transition-colors" href="#">Cookie Settings</a>
+        </div>
+      </div>
+    </div>
+    <div class="mt-12 lg:mt-16 bg-surface-container-high/40 rounded-lg p-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-on-surface-variant text-center sm:text-left">
+      <p>© 2026 O'Sullivan Communications. All rights reserved.</p>
+      <p class="font-medium text-on-surface tracking-wide">Commercial clarity, editorial craft, and production precision.</p>
+    </div>
+  </div>
+</footer>
+<script>
+(function () {
+  var btn = document.getElementById('menu-toggle');
+  var menu = document.getElementById('mobile-menu');
+  var icon = document.getElementById('menu-icon');
+  if (!btn || !menu) return;
+  function setOpen(open) {
+    menu.setAttribute('data-open', open ? 'true' : 'false');
+    menu.setAttribute('aria-hidden', open ? 'false' : 'true');
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    btn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    icon.textContent = open ? 'close' : 'menu';
+  }
+  btn.addEventListener('click', function () { setOpen(menu.getAttribute('data-open') !== 'true'); });
+  menu.addEventListener('click', function (e) { if (e.target.closest('a')) setOpen(false); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setOpen(false); });
+  document.addEventListener('click', function (e) { if (!e.target.closest('#site-header')) setOpen(false); });
+  window.addEventListener('resize', function () { if (window.innerWidth >= 1024) setOpen(false); });
+})();
+</script>
+
+<script>
+(function () {
+  var icons = [[/airline|flight|travel|boarding|passenger/i,'flight_takeoff'],[/cosmetic|skincare|perfume|luxury|beauty/i,'spa'],
+               [/consumer|retail|fmcg|electronics|supermarket/i,'inventory_2'],[/insurance|financial|policy/i,'description'],
+               [/press|print|proof|lithograph/i,'print'],[/typograph|multilingual|copy/i,'translate']];
+  function iconFor(t){ for (var i=0;i<icons.length;i++) if (icons[i][0].test(t)) return icons[i][1]; return 'palette'; }
+  function label(t){ var s=(t||'').split(/[,.:]/)[0].trim(); return s.length>70 ? s.slice(0,67)+'…' : s; }
+  function placeholder(t){
+    var d=document.createElement('div');
+    d.setAttribute('role','img'); d.setAttribute('aria-label', label(t) || 'Image');
+    d.style.cssText='display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:20px;text-align:center;'+
+      'background:linear-gradient(135deg,#d9e2ff 0%,#efedee 55%,#f9e37a 140%);color:#094cb2;min-height:100%;';
+    d.innerHTML='<span class="material-symbols-outlined" style="font-size:40px;opacity:.85">'+iconFor(t)+'</span>'+
+      '<span style="font:500 12px/1.4 Inter,system-ui,sans-serif;color:#434653;max-width:28ch">'+label(t)+'</span>';
+    return d;
+  }
+  function swap(img){
+    if (img.dataset.fallback) return; img.dataset.fallback='1';
+    var d=placeholder(img.getAttribute('data-alt')||img.alt);
+    d.className=img.className; d.classList.remove('object-cover');
+    if (!/\bh-(\d|full|auto|\[)/.test(img.className) && !/aspect-/.test(img.className)) d.style.minHeight='14rem';
+    img.replaceWith(d);
+  }
+  document.querySelectorAll('img').forEach(function(img){
+    if (img.complete && img.naturalWidth===0) swap(img); else img.addEventListener('error', function(){ swap(img); });
+  });
+  document.querySelectorAll('[style*="background-image"]').forEach(function(el){
+    var m=el.style.backgroundImage.match(/url\(["']?(.*?)["']?\)/); if(!m) return;
+    var t=new Image(); t.onerror=function(){ var p=placeholder(el.getAttribute('data-alt')); el.style.backgroundImage='none'; el.appendChild(p); p.style.height='100%'; }; t.src=m[1];
+  });
+})();
+</script>
+</body>
+</html>

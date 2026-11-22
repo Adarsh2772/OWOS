@@ -38,7 +38,6 @@
 .osc-jump:hover{background-color:rgb(217 226 255)}
 .osc-engine{background-color:rgb(232 239 252)}
 .osc-engine:hover{background-color:rgb(217 226 255)}
-main section.osc-on-dark.osc-section:last-of-type{padding-bottom:24px}
 #inquiry-form.osc-section{padding-bottom:32px;background-color:rgb(236 242 250)}
 footer.osc-footer-flush>div:first-child{padding-top:1.5rem;padding-bottom:0}
 footer.osc-footer-flush .osc-footer-bar{margin:1.5rem 0 0;padding-top:1rem;padding-bottom:1rem;border-radius:0}

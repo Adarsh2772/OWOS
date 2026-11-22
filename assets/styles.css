@@ -55,3 +55,18 @@ footer.osc-footer-flush .osc-footer-bar{margin:1.5rem 0 0;padding-top:1rem;paddi
   footer.osc-footer-flush a::after{content:"";position:absolute;inset:-5px 0}
   .service-chip input[type=checkbox]{width:20px;height:20px;flex-shrink:0}
 }
+/* Mobile polish (punchlist): 16px form text stops iOS/Android zoom-on-focus */
+@media (max-width:1023px),(pointer:coarse){
+  #project-intake-form input:not([type=checkbox]):not([type=radio]),#project-intake-form textarea,#project-intake-form select{font-size:16px}
+}
+/* Menu button: 44x44 minimum touch target */
+#site-header #menu-toggle{width:44px;height:44px}
+/* Closed mobile menu: remove from Tab order and screen readers (visibility flips after fade-out) */
+#site-header #mobile-menu{transition:opacity .2s ease,transform .2s ease,visibility 0s linear .2s}
+#site-header #mobile-menu[data-open="false"]{visibility:hidden}
+#site-header #mobile-menu[data-open="true"]{visibility:visible;transition-delay:0s}
+/* Small inline text links in page content ("Powers ...", "Return to EMMIS", "Visit alcus.org"): ~44px tap height */
+@media (max-width:1023px){
+  main a.inline-flex.text-sm.font-semibold.text-primary{position:relative}
+  main a.inline-flex.text-sm.font-semibold.text-primary::after{content:"";position:absolute;inset:-12px 0}
+}

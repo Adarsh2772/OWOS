@@ -35,6 +35,9 @@
 .osc-map{display:block;width:100%;height:168px;margin-top:16px;border:0;border-radius:12px}
 .osc-alc-lockup{display:inline-flex;align-items:center;justify-content:center;padding:10px 12px;background:rgb(255 255 255);border-radius:12px;box-shadow:0 1px 2px rgba(0,0,0,.05)}
 .osc-alc-lockup img{display:block;height:64px;width:auto}
+.osc-jump:hover{background-color:rgb(217 226 255)}
+.osc-engine{background-color:rgb(232 239 252)}
+.osc-engine:hover{background-color:rgb(217 226 255)}
 main section.osc-on-dark.osc-section:last-of-type{padding-bottom:24px}
 #inquiry-form.osc-section{padding-bottom:32px;background-color:rgb(236 242 250)}
 footer.osc-footer-flush>div:first-child{padding-top:1.5rem;padding-bottom:0}

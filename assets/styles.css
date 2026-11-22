@@ -19,6 +19,8 @@
 .osc-utility-btn{box-shadow:inset 0 0 0 1px rgb(195 198 213)}
 .osc-matrix{width:100%;border-collapse:collapse;table-layout:fixed;font-size:13px}
 .osc-matrix th,.osc-matrix td{padding:10px 12px;text-align:left;vertical-align:top;border-bottom:1px solid rgb(227 226 227);overflow-wrap:break-word}
+.osc-matrix tbody tr:first-child th,.osc-matrix tbody tr:first-child td{padding-top:20px}
+.osc-matrix tbody tr:last-child th,.osc-matrix tbody tr:last-child td{padding-bottom:20px}
 @media (max-width:767px){
   .osc-matrix-wrap{background:transparent;box-shadow:none;border-radius:0}
   .osc-matrix,.osc-matrix tbody,.osc-matrix tr,.osc-matrix th,.osc-matrix td{display:block;width:100%}
@@ -37,6 +39,7 @@
 .osc-map{display:block;width:100%;height:168px;margin-top:16px;border:0;border-radius:12px}
 .osc-alc-lockup{display:inline-flex;align-items:center;justify-content:center;padding:10px 12px;background:rgb(255 255 255);border-radius:12px;box-shadow:0 1px 2px rgba(0,0,0,.05)}
 .osc-alc-lockup img{display:block;height:64px;width:auto}
+@media (min-width:1280px){.osc-alc-line{white-space:nowrap}}
 .osc-jump:hover{background-color:rgb(217 226 255)}
 .osc-engine{background-color:rgb(232 239 252)}
 .osc-engine:hover{background-color:rgb(217 226 255)}

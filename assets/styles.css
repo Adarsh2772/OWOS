@@ -5,6 +5,8 @@
 .osc-h2{font-family:"Noto Serif",serif;font-weight:600;font-size:24px;line-height:1.25;color:rgb(27 28 29)}
 .osc-section{padding-top:40px;padding-bottom:40px}
 @media (min-width:1024px){.osc-h1{font-size:36px}.osc-h2{font-size:28px}.osc-kicker{font-size:13px}.osc-section{padding-top:48px;padding-bottom:48px}}
+#emmis-engines .osc-kicker{font-size:24px}
+@media (min-width:1024px){#emmis-engines .osc-kicker{font-size:28px}}
 .osc-on-dark .osc-h2,.osc-on-dark .osc-h1{color:rgb(255 255 255)}
 .osc-on-dark .osc-kicker{color:rgb(249 227 122)}
 .osc-crumbs{margin:0 0 1.25rem}

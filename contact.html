@@ -29,7 +29,7 @@
 <body class="bg-surface font-body text-on-surface min-h-screen flex flex-col antialiased selection:bg-secondary-container selection:text-on-secondary-container">
 <header id="site-header" class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/95 backdrop-blur-md shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
   <div class="h-16 sm:h-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 flex items-center justify-between gap-4 lg:gap-8">
-    <a class="flex items-center gap-3 group min-w-0" href="index.html" aria-label="O'Sullivan Communications – home">
+    <a class="flex items-center gap-3 group min-w-0" href="/OWOS" aria-label="O'Sullivan Communications – home">
       <img src="assets/OSC_4C_Large.svg" alt="OSC One World One Stop – O'Sullivan Communications" width="286" height="98" class="osc-logo w-auto shrink-0">
     </a>
     <nav class="osc-nav hidden lg:flex items-center gap-6 xl:gap-8" aria-label="Main"><a class="text-sm text-on-surface-variant hover:text-on-surface transition-colors" href="solutions.html">Solutions</a><a class="text-sm text-on-surface-variant hover:text-on-surface transition-colors" href="platform.html">Our Platform</a><a class="text-sm text-on-surface-variant hover:text-on-surface transition-colors" href="about.html">About OSC</a><a aria-current="page" class="text-sm text-primary font-semibold transition-colors" href="contact.html">Contact</a></nav>
@@ -48,9 +48,9 @@
   </div>
 </header>
 <main class="w-full pt-16 sm:pt-20 bg-surface flex-1"><div class="flex flex-col w-full">
-<section class="osc-section w-full bg-surface-container-low" id="inquiry-form">
+<section class="osc-section w-full" id="inquiry-form">
 <div class="max-w-7xl mx-auto px-6 lg:px-12">
-<nav class="osc-crumbs" aria-label="Breadcrumb"><ol><li><a href="index.html">Home</a></li><li aria-current="page">Contact</li></ol></nav>
+<nav class="osc-crumbs" aria-label="Breadcrumb"><ol><li><a href="/OWOS">Home</a></li><li aria-current="page">Contact</li></ol></nav>
 <span class="osc-kicker mb-3">COMMERCIAL &amp; OPERATIONAL INQUIRIES</span>
 <h1 class="osc-h1 mb-4">Contact O'Sullivan Communications (OSC)</h1>
 <p class="text-lg font-medium text-on-surface leading-relaxed mb-2">Connect With Our U.S. and U.K. Project Management Teams</p>
@@ -125,8 +125,10 @@
 </button>
 </form>
 </div>
-<div class="lg:col-span-5 flex flex-col gap-6">
-<span class="osc-kicker">Direct Transatlantic Operations</span>
+<div class="lg:col-span-5">
+<span class="osc-kicker mb-3">Direct Transatlantic Operations</span>
+<h2 class="osc-h2 mb-6">U.S. and U.K. Offices</h2>
+<div class="flex flex-col gap-6">
 <div class="p-6 rounded-2xl bg-surface-container-lowest shadow-sm">
 <div class="flex items-center gap-3 mb-4">
 <span class="w-10 h-10 rounded-lg bg-secondary-container text-on-secondary-container flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-xl">location_on</span></span>
@@ -134,6 +136,7 @@
 </div>
 <p class="text-sm text-on-surface-variant leading-relaxed mb-3">O'Sullivan Communications (OSC)<br>P.O. Box 1116<br>Glen Rock, NJ 07452</p>
 <p class="text-sm leading-relaxed"><a class="font-semibold text-primary hover:text-primary-container" href="tel:9732275112">Tel: 973-227-5112</a><br><a class="text-on-surface hover:text-primary break-all" href="mailto:inquiries@oneworldonestop.com">inquiries@oneworldonestop.com</a></p>
+<iframe class="osc-map" title="Map of U.S. Operations in Glen Rock, New Jersey" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=Glen%20Rock%2C%20NJ%2007452&amp;z=13&amp;output=embed"></iframe>
 </div>
 <div class="p-6 rounded-2xl bg-surface-container-lowest shadow-sm">
 <div class="flex items-center gap-3 mb-4">
@@ -142,6 +145,8 @@
 </div>
 <p class="text-sm text-on-surface-variant leading-relaxed mb-3">O'Sullivan Communications (OSC)<br>Unit 3, Hurricane Way, Apex Park<br>Slough, SL3 8AG, UK</p>
 <p class="text-sm leading-relaxed"><a class="font-semibold text-primary hover:text-primary-container" href="tel:+4401753942467">Tel: +44 01753 942467</a><br><a class="text-on-surface hover:text-primary break-all" href="mailto:inquiries@oneworldonestop.com">inquiries@oneworldonestop.com</a></p>
+<iframe class="osc-map" title="Map of U.K. Operations in Slough" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=Unit%203%20Hurricane%20Way%20Apex%20Park%20Slough%20SL3%208AG&amp;z=15&amp;output=embed"></iframe>
+</div>
 </div>
 </div>
 </div>
@@ -187,11 +192,11 @@
     }
   </script>
 </div></main>
-<footer class="w-full bg-surface-container-low mt-auto">
+<footer class="osc-footer-flush w-full bg-surface-container-low mt-auto">
   <div class="max-w-7xl mx-auto px-6 lg:px-12 py-14 lg:py-20">
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8">
       <div class="sm:col-span-2 lg:col-span-4 flex flex-col gap-5">
-        <a class="flex items-center gap-3" href="index.html"><img src="assets/OSC_4C_Large.svg" alt="OSC One World One Stop – O'Sullivan Communications" width="286" height="98" class="h-14 w-auto"></a>
+        <a class="flex items-center gap-3" href="/OWOS"><img src="assets/OSC_4C_Large.svg" alt="OSC One World One Stop – O'Sullivan Communications" width="286" height="98" class="h-14 w-auto"></a>
         <p class="text-sm leading-relaxed text-on-surface-variant max-w-sm">O'Sullivan Communications (OSC) — Single-source global translation, inflight menu programs, and commercial publishing, from concept to completion.</p>
         <a class="text-sm font-medium text-primary hover:text-primary-container transition-colors" href="https://www.alcus.org/" target="_blank" rel="noopener noreferrer">Member: ALC — Association of Language Companies</a>
       </div>
@@ -216,7 +221,9 @@
         </div>
       </div>
     </div>
-    <div class="mt-12 lg:mt-16 bg-surface-container-high/40 rounded-lg p-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-on-surface-variant text-center sm:text-left">
+  </div>
+  <div class="osc-footer-bar bg-surface-container-high/40 px-6 lg:px-12 py-4 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-on-surface-variant text-center sm:text-left">
+    <div class="max-w-7xl mx-auto w-full flex flex-col sm:flex-row items-center justify-between gap-3">
       <p>© 2026 O'Sullivan Communications. All rights reserved.</p>
       <p class="font-medium text-on-surface tracking-wide">A Maryknoll Group Company · Established 1973</p>
     </div>

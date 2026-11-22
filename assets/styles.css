@@ -46,3 +46,12 @@ footer.osc-footer-flush .osc-footer-bar{margin:1.5rem 0 0;padding-top:1rem;paddi
   #site-header > div{height:96px}
   main.w-full{padding-top:96px}
 }
+/* Responsive fixes: 3-up solution cards only from desktop width (cramped on tablets) */
+@media (min-width:1024px){.osc-tri{grid-template-columns:repeat(3,minmax(0,1fr))}}
+/* Larger touch targets on touch-size screens without changing visual layout */
+@media (max-width:1023px){
+  .osc-crumbs a,footer.osc-footer-flush a{position:relative}
+  .osc-crumbs a::after{content:"";position:absolute;inset:-14px -4px}
+  footer.osc-footer-flush a::after{content:"";position:absolute;inset:-5px 0}
+  .service-chip input[type=checkbox]{width:20px;height:20px;flex-shrink:0}
+}

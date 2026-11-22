@@ -29,7 +29,7 @@
 <body class="bg-surface font-body text-on-surface min-h-screen flex flex-col antialiased selection:bg-secondary-container selection:text-on-secondary-container">
 <header id="site-header" class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/95 backdrop-blur-md shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
   <div class="h-16 sm:h-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 flex items-center justify-between gap-4 lg:gap-8">
-    <a class="flex items-center gap-3 group min-w-0" href="index.html" aria-label="O'Sullivan Communications – home">
+    <a class="flex items-center gap-3 group min-w-0" href="/OWOS" aria-label="O'Sullivan Communications – home">
       <img src="assets/OSC_4C_Large.svg" alt="OSC One World One Stop – O'Sullivan Communications" width="286" height="98" class="osc-logo w-auto shrink-0">
     </a>
     <nav class="osc-nav hidden lg:flex items-center gap-6 xl:gap-8" aria-label="Main"><a class="text-sm text-on-surface-variant hover:text-on-surface transition-colors" href="solutions.html">Solutions</a><a aria-current="page" class="text-sm text-primary font-semibold transition-colors" href="platform.html">Our Platform</a><a class="text-sm text-on-surface-variant hover:text-on-surface transition-colors" href="about.html">About OSC</a><a class="text-sm text-on-surface-variant hover:text-on-surface transition-colors" href="contact.html">Contact</a></nav>
@@ -52,7 +52,7 @@
 <div class="max-w-7xl mx-auto px-6 lg:px-12">
 <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
 <div class="lg:col-span-7">
-<nav class="osc-crumbs" aria-label="Breadcrumb"><ol><li><a href="index.html">Home</a></li><li aria-current="page">Our Platform</li></ol></nav>
+<nav class="osc-crumbs" aria-label="Breadcrumb"><ol><li><a href="/OWOS">Home</a></li><li aria-current="page">Our Platform</li></ol></nav>
 <span class="osc-kicker mb-3">THE EMMIS ECOSYSTEM · PROPRIETARY PUBLISHING &amp; LOGISTICS INTELLIGENCE</span>
 <h1 class="osc-h1 mb-5 max-w-4xl">Our Platform: The Proprietary EMMIS Ecosystem for Airline Culinary and Multilingual Publishing</h1>
 <p class="text-lg font-medium text-on-surface leading-relaxed mb-4 max-w-3xl">Connecting Flight Schedule Intelligence, Structured Content Authoring, Digital Menu Inspection, and Galley Execution</p>
@@ -119,21 +119,21 @@
 </div>
 </div>
 </section>
-<section class="osc-section w-full bg-surface-container-low">
+<section class="osc-section w-full bg-surface-container-low" id="lifecycle-matrix">
 <div class="max-w-7xl mx-auto px-6 lg:px-12">
 <div class="max-w-3xl mb-10">
 <span class="osc-kicker mb-3">System Lifecycle Matrix</span>
 <h2 class="osc-h2">Functional Division Across the EMMIS Engines</h2>
 </div>
-<div class="rounded-xl bg-surface-container-lowest shadow-sm">
+<div class="osc-matrix-wrap rounded-xl bg-surface-container-lowest shadow-sm">
 <table class="osc-matrix">
 <thead><tr><th scope="col">Functional Capability</th><th scope="col">EMMIS Order Maintenance</th><th scope="col">EMMIS CMS</th><th scope="col">EMMIS MenuViewer</th><th scope="col">EMMIS ChefChats</th></tr></thead>
 <tbody>
-<tr><th scope="row">Flight Schedule Intelligence</th><td class="osc-core">Core Engine</td><td>Metadata Sync</td><td>Route &amp; Flight Search</td><td>Flight Context</td></tr>
-<tr><th scope="row">Structured Culinary Authoring</th><td>Template &amp; Lot Rules</td><td class="osc-core">Core Engine</td><td>Read-Only View</td><td>Culinary Context</td></tr>
-<tr><th scope="row">Automated Document Layout</th><td>Imposition Specifications</td><td class="osc-core">Core Engine</td><td>Rendered Digital PDF</td><td>Visual Plating Cards</td></tr>
-<tr><th scope="row">Multilingual Localization</th><td>Route Language Target</td><td>Translation Pipeline</td><td>Multilingual Catalog</td><td>Ingredient &amp; Allergen Labels</td></tr>
-<tr><th scope="row">Catering &amp; Galley Execution</th><td>Carton &amp; Shipping Labels</td><td>Digital Asset Payload</td><td>Approved Reference Archive</td><td class="osc-core">Core Engine</td></tr>
+<tr><th scope="row">Flight Schedule Intelligence</th><td data-label="EMMIS Order Maintenance">Core Engine</td><td data-label="EMMIS CMS">Metadata Sync</td><td data-label="EMMIS MenuViewer">Route &amp; Flight Search</td><td data-label="EMMIS ChefChats">Flight Context</td></tr>
+<tr><th scope="row">Structured Culinary Authoring</th><td data-label="EMMIS Order Maintenance">Template &amp; Lot Rules</td><td data-label="EMMIS CMS">Core Engine</td><td data-label="EMMIS MenuViewer">Read-Only View</td><td data-label="EMMIS ChefChats">Culinary Context</td></tr>
+<tr><th scope="row">Automated Document Layout</th><td data-label="EMMIS Order Maintenance">Imposition Specifications</td><td data-label="EMMIS CMS">Core Engine</td><td data-label="EMMIS MenuViewer">Rendered Digital PDF</td><td data-label="EMMIS ChefChats">Visual Plating Cards</td></tr>
+<tr><th scope="row">Multilingual Localization</th><td data-label="EMMIS Order Maintenance">Route Language Target</td><td data-label="EMMIS CMS">Translation Pipeline</td><td data-label="EMMIS MenuViewer">Multilingual Catalog</td><td data-label="EMMIS ChefChats">Ingredient &amp; Allergen Labels</td></tr>
+<tr><th scope="row">Catering &amp; Galley Execution</th><td data-label="EMMIS Order Maintenance">Carton &amp; Shipping Labels</td><td data-label="EMMIS CMS">Digital Asset Payload</td><td data-label="EMMIS MenuViewer">Approved Reference Archive</td><td data-label="EMMIS ChefChats">Core Engine</td></tr>
 </tbody>
 </table>
 </div>
@@ -150,11 +150,11 @@
 </div>
 </section>
 </div></main>
-<footer class="w-full bg-surface-container-low mt-auto">
+<footer class="osc-footer-flush w-full bg-surface-container-low mt-auto">
   <div class="max-w-7xl mx-auto px-6 lg:px-12 py-14 lg:py-20">
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8">
       <div class="sm:col-span-2 lg:col-span-4 flex flex-col gap-5">
-        <a class="flex items-center gap-3" href="index.html"><img src="assets/OSC_4C_Large.svg" alt="OSC One World One Stop – O'Sullivan Communications" width="286" height="98" class="h-14 w-auto"></a>
+        <a class="flex items-center gap-3" href="/OWOS"><img src="assets/OSC_4C_Large.svg" alt="OSC One World One Stop – O'Sullivan Communications" width="286" height="98" class="h-14 w-auto"></a>
         <p class="text-sm leading-relaxed text-on-surface-variant max-w-sm">O'Sullivan Communications (OSC) — Single-source global translation, inflight menu programs, and commercial publishing, from concept to completion.</p>
         <a class="text-sm font-medium text-primary hover:text-primary-container transition-colors" href="https://www.alcus.org/" target="_blank" rel="noopener noreferrer">Member: ALC — Association of Language Companies</a>
       </div>
@@ -179,7 +179,9 @@
         </div>
       </div>
     </div>
-    <div class="mt-12 lg:mt-16 bg-surface-container-high/40 rounded-lg p-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-on-surface-variant text-center sm:text-left">
+  </div>
+  <div class="osc-footer-bar bg-surface-container-high/40 px-6 lg:px-12 py-4 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-on-surface-variant text-center sm:text-left">
+    <div class="max-w-7xl mx-auto w-full flex flex-col sm:flex-row items-center justify-between gap-3">
       <p>© 2026 O'Sullivan Communications. All rights reserved.</p>
       <p class="font-medium text-on-surface tracking-wide">A Maryknoll Group Company · Established 1973</p>
     </div>
